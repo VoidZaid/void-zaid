@@ -1,0 +1,17 @@
+[33mcommit 495a83ec65a845ffe4c9e87b1578648a92df2910[m[33m ([m[1;36mHEAD -> [m[1;32mlocalbr[m[33m)[m
+Author: Void Zaid PC <rpauldiaz.s@gmail.com>
+Date:   Wed Oct 25 23:57:30 2023 -0500
+
+    footer bar structure finished - PENDING: add footer bar responsive styles - create footer menu and widget if necesary - change the bg for all the page
+
+[33mcommit 4521a83ab8f0bac628aeb8bf11b567a88abd3bcc[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: void_zaid <renediaz725@gmail.com>
+Date:   Wed Oct 25 08:15:21 2023 -0500
+
+    header structure and style finished, menu responsive finished - PENDING: add routes/improve logo
+
+[33mcommit 29ac53163d7ff38c1cf93fbab18e0f6a38006282[m
+Author: void_zaid <renediaz725@gmail.com>
+Date:   Tue Oct 24 10:38:29 2023 -0500
+
+    estado inicial
