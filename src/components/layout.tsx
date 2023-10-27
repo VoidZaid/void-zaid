@@ -23,18 +23,50 @@ const Layout = () => {
             </div>
          </div> */}
          <div
-            className="relative max-w-7xl mx-auto z-10 px-6 h-customMobile flex flex-col pt-6 
+            className="max-w-7xl mx-auto z-10 px-6 pt-6 h-customMobile flex flex-col  text-slate-200 pb-2 gap-2
             lg:w-1/2"
          >
-            <h1 className="text-4xl font-bold text-slate-200 pb-4">Paúl Díaz</h1>
-            <h2 className="text-xl font-medium text-slate-200">Web Developer</h2>
-            <p>Hola, mi nombre es Paúl Díaz y construyo páginas y aplicaciones web</p>
+            <h1 className="text-4xl font-bold pb-4">Paúl Díaz</h1>
+            <h2 className="text-xl font-medium">Web Developer</h2>
+            <p className="tex text-slate-400">
+               Hola, mi nombre es Paúl Díaz y construyo páginas y aplicaciones
+               web
+            </p>
             <img
                className="mx-auto my-10 w-full"
                src="https://media.istockphoto.com/id/1182146951/es/foto/joven-riendo-de-pie-contra-un-fondo-gris.jpg?s=612x612&w=0&k=20&c=AVtbOJd_p74jus3tkJAu7Pa7QPz7_mfZCFL9slbu9_g="
                alt="void_zaid developer"
             />
-            <ul className="flex gap-6 justify-center mt-auto pb-10">
+            <div className="mx-auto text-5xl font-bold">{"<coder/>"}</div>
+            <nav className="hidden">
+               <ul>
+                  <li>
+                     <a href=""></a>
+                  </li>
+               </ul>
+            </nav>
+            <nav>
+               <ul>
+                  <li>
+                     <a href=""></a>
+                  </li>
+               </ul>
+            </nav>
+            <nav>
+               <ul>
+                  <li>
+                     <a href=""></a>
+                  </li>
+               </ul>
+            </nav>
+            <nav>
+               <ul>
+                  <li>
+                     <a href=""></a>
+                  </li>
+               </ul>
+            </nav>
+            <ul className="flex gap-6 justify-center mt-auto pb-4">
                <li>
                   <a
                      href="#"
@@ -72,7 +104,35 @@ const Layout = () => {
          </div>
 
          <hr />
-         <div className="relative max-w-7xl mx-auto z-10">hola mundo</div>
+
+         <section
+            className="max-w-7xl mx-auto z-10 px-6 flex flex-col text-slate-400
+            lg:w-1/2"
+         >
+            <div className="w-full">
+               <div className="flex gap-2 flex-col">
+                  <p><span id="sobre_mi">Hola</span>, soy de Perú y tengo 25 años. En el año 2021 surgió mi curiosidad por saber{" "}
+                     <i className="font-bold not-italic">¿que es la programacion?</i>, me puse a investigar y decidí
+                     llevar un curso en Desarrollo Web en una
+                     universidad de mis país. Con el transcurso de los meses
+                     encontre un trabajo en el cual en parte debia administrar un sitio web en Wordpress.
+                  </p>
+                  <p>
+                     A mediados del 2022 inicié con el programa ONE de Oracle,
+                     era un bootcamp intensivo en el que al
+                     final de cada módulo se les retaba a los estudiantes con{" "}
+                     <i>Sprints</i> los cuales debiamos resolver aplicando los
+                     conocimientos obtenidos, allí aprendí sobre <a href="#">Front-end</a> y <a href="#">Back-end</a>
+                  </p>
+                  <p>
+                     Culminado el programa decidi continuar con mi camino para
+                     lograr ser desarrollador Full-stack y aprender Frameworks,
+                     tal es el caso de React que es el que estoy aprendiendo
+                     ahora
+                  </p>
+               </div>
+            </div>
+         </section>
 
          {/* se viene el efecto de fondo circular desvanecido con gradiente*/}
          <div
@@ -81,7 +141,7 @@ const Layout = () => {
          >
             <div
                aria-hidden="true"
-               className="bg-layers bg-scale w-56 h-56 m-auto blur-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 rounded-full md:w-[30rem] md:h-[30rem] md:blur-3xl"
+               className="bg-layers bg-scale w-56 h-56 m-auto blur-xl bg-gradient-to-r from-cyan-400 via-blue-600 to-purple-800 rounded-full md:w-[30rem] md:h-[30rem] md:blur-3xl"
             ></div>
          </div>
          {/* este es la capa que le da un efecto ocurecido a el bg-cyan y al efecto de fondo con degradado*/}

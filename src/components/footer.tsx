@@ -12,7 +12,7 @@ const Footer = () => {
          lg:flex-row lg:px-4
          md:justify-between ">
             <span className="block text-gray-300">
-               René Díaz &copy; 2023 | todos los derechos reservados
+               &copy; 2023 | todos los derechos reservados
             </span>
             <div className="flex flex-col gap-6 items-center justify-around
             lg:flex-row">
