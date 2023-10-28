@@ -139,7 +139,7 @@ const Header = () => {
                   href="#"
                   className="text-sm font-semibold leading-6 text-gray-900"
                >
-                  <Github className="fill-slate-40 stroke-teal-500" size="40" />
+                  <Github className="fill-slate-40 stroke-teal-500" height="40" />
                </a>
                <a
                   href="#"
@@ -147,7 +147,7 @@ const Header = () => {
                >
                   <Linkedin
                      className="fill-slate-40 stroke-teal-500"
-                     size="40"
+                     height="40"
                   />
                </a>
                <a
@@ -156,7 +156,7 @@ const Header = () => {
                >
                   <Facebook
                      className="fill-slate-40 stroke-teal-500"
-                     size="40"
+                     height="40"
                   />
                </a>
             </div>
@@ -251,7 +251,7 @@ const Header = () => {
                         >
                            <Github
                               className="fill-slate-40 stroke-teal-500"
-                              size="40"
+                              height="40"
                            />
                         </a>
                         <a
@@ -260,7 +260,7 @@ const Header = () => {
                         >
                            <Linkedin
                               className="fill-slate-40 stroke-teal-500"
-                              size="40"
+                              height="40"
                            />
                         </a>
                         <a
@@ -269,7 +269,7 @@ const Header = () => {
                         >
                            <Facebook
                               className="fill-slate-40 stroke-teal-500"
-                              size="40"
+                              height="40"
                            />
                         </a>
                      </div>

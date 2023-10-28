@@ -1,27 +1,9 @@
 import React from "react";
-import { Github, Linkedin, Facebook } from "./icons";
+import { Github, Linkedin, Facebook, Continental, Alura, Css, Javascript, Typescript, Tailwind, ReactIcon, Php, Mysql, Git } from "./icons";
 
 const Layout = () => {
    return (
       <main className="relative flex flex-col bg-cyan-900 text-slate-400 overflow-hidden md:py-40">
-         {/* <div className="relative z-[1] container m-auto px-6 md:px-12">
-            <div className="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
-               <div className="flex flex-wrap items-center justify-between md:flex-nowrap">
-                  <div className="w-full space-x-12 flex justify-center text-gray-300 sm:w-7/12 md:justify-start">
-                     <ul role="list" className="space-y-8">
-                        <li>
-                           <a
-                              href="#"
-                              className="flex items-center space-x-3 hover:text-sky-400 transition"
-                           >
-                              <span>Github</span>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div> */}
          <div
             className="max-w-7xl mx-auto z-10 px-6 pt-6 h-customMobile flex flex-col  text-slate-200 pb-2 gap-2
             lg:w-1/2"
@@ -72,10 +54,7 @@ const Layout = () => {
                      href="#"
                      className="text-sm font-semibold leading-6 text-gray-900"
                   >
-                     <Github
-                        className="fill-slate-40 stroke-teal-500"
-                        size="40"
-                     />
+                     <Github className="stroke-teal-500" height="40" />
                   </a>
                </li>
                <li>
@@ -83,10 +62,7 @@ const Layout = () => {
                      href="#"
                      className="text-sm font-semibold leading-6 text-gray-900"
                   >
-                     <Linkedin
-                        className="fill-slate-40 stroke-teal-500"
-                        size="40"
-                     />
+                     <Linkedin className="stroke-teal-500" height="40" />
                   </a>
                </li>
                <li>
@@ -94,10 +70,7 @@ const Layout = () => {
                      href="#"
                      className="text-sm font-semibold leading-6 text-gray-900"
                   >
-                     <Facebook
-                        className="fill-slate-40 stroke-teal-500"
-                        size="40"
-                     />
+                     <Facebook className="stroke-teal-500" height="40" />
                   </a>
                </li>
             </ul>
@@ -106,23 +79,29 @@ const Layout = () => {
          <hr />
 
          <section
-            className="max-w-7xl mx-auto z-10 px-6 flex flex-col text-slate-400
+            className="max-w-7xl mx-auto z-10 px-6 mt-10 flex flex-col gap-10 text-slate-400
             lg:w-1/2"
          >
             <div className="w-full">
                <div className="flex gap-2 flex-col">
-                  <p><span id="sobre_mi">Hola</span>, soy de Perú y tengo 25 años. En el año 2021 surgió mi curiosidad por saber{" "}
-                     <i className="font-bold not-italic">¿que es la programacion?</i>, me puse a investigar y decidí
-                     llevar un curso en Desarrollo Web en una
-                     universidad de mis país. Con el transcurso de los meses
-                     encontre un trabajo en el cual en parte debia administrar un sitio web en Wordpress.
+                  <p>
+                     <span id="sobre_mi">Hola</span>, soy de Perú y tengo 25
+                     años. En el año 2021 surgió mi curiosidad por saber{" "}
+                     <i className="font-bold not-italic">
+                        ¿que es la programacion?
+                     </i>
+                     , me puse a investigar y decidí llevar un curso en
+                     Desarrollo Web en una universidad de mis país. Con el
+                     transcurso de los meses encontre un trabajo en el cual en
+                     parte debia administrar un sitio web en Wordpress.
                   </p>
                   <p>
                      A mediados del 2022 inicié con el programa ONE de Oracle,
-                     era un bootcamp intensivo en el que al
-                     final de cada módulo se les retaba a los estudiantes con{" "}
-                     <i>Sprints</i> los cuales debiamos resolver aplicando los
-                     conocimientos obtenidos, allí aprendí sobre <a href="#">Front-end</a> y <a href="#">Back-end</a>
+                     era un bootcamp intensivo en el que al final de cada módulo
+                     se les retaba a los estudiantes con <i>Sprints</i> los
+                     cuales debiamos resolver aplicando los conocimientos
+                     obtenidos, allí aprendí sobre <a href="#">Front-end</a> y{" "}
+                     <a href="#">Back-end</a>
                   </p>
                   <p>
                      Culminado el programa decidi continuar con mi camino para
@@ -131,6 +110,73 @@ const Layout = () => {
                      ahora
                   </p>
                </div>
+            </div>
+
+            <div className="flex flex-col gap-6">
+               <h2 className="font-bold text-slate-200">FORMACIÓN</h2>
+               <div className="group">
+                  <div
+                     className=" flex flex-col border-spacing-3 p-3 rounded bg-slate-800/50 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] 
+                  lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]"
+                  >
+                     <p className="italic text-sm">
+                        Julio del 2022 - Febrero del 2023
+                     </p>
+                     <p className="">ONE | Oracle Next Education</p>
+                     <h3 className="hover:text-teal-300 text-slate-200 font-bold pb-6">
+                        Desarrollo Front-end y Back-end
+                     </h3>
+                     <Alura className="fill fill-slate-200 pb-4" height="150" />
+                     <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Iusto ea suscipit saepe quam nemo blanditiis
+                        delectus nam amet ullam. Beatae obcaecati doloribus
+                        libero porro consequatur exercitationem incidunt iste
+                        voluptatem ullam?
+                     </p>
+                  </div>
+               </div>
+               <div className="group">
+                  <div
+                     className=" flex flex-col border-spacing-3 p-3 rounded bg-slate-800/50 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] 
+                  lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]"
+                  >
+                     <p className="italic text-sm">Mayo - Julio del 2021</p>
+                     <p className="">
+                        Escuela de Posgrado de la Universidad Continental
+                     </p>
+                     <h3 className="hover:text-teal-300 text-slate-200 font-bold pb-6">
+                        Desarrollador Web
+                     </h3>
+                     <Continental
+                        className="fill fill-slate-200 pb-4"
+                        height="150"
+                     />
+
+                     <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Iusto ea suscipit saepe quam nemo blanditiis
+                        delectus nam amet ullam. Beatae obcaecati doloribus
+                        libero porro consequatur exercitationem incidunt iste
+                        voluptatem ullam?
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+            <div>
+               <h2 className="font-bold text-slate-200">FORMACIÓN</h2>
+               <Css className="font-bold" height="50"/>
+               <Javascript className="font-bold" height="50"/>
+               <Php className="font-bold" height="50"/>
+               <ReactIcon className="font-bold" height="50"/>
+               <Typescript className="font-bold" height="50"/>
+               <Tailwind className="font-bold" height="50"/>
+               <Git className="font-bold" height="50"/>
+               <Mysql className="font-bold" height="50"/>
+            </div>
+            <div>
+               <h2>Proyectos</h2>
             </div>
          </section>
 
