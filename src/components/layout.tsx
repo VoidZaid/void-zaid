@@ -1,5 +1,19 @@
 import React from "react";
-import { Github, Linkedin, Facebook, Continental, Alura, Css, Javascript, Typescript, Tailwind, ReactIcon, Php, Mysql, Git } from "./icons";
+import {
+   Github,
+   Linkedin,
+   Facebook,
+   Continental,
+   Alura,
+   Css,
+   Javascript,
+   Typescript,
+   Tailwind,
+   ReactIcon,
+   Php,
+   Mysql,
+   Git,
+} from "./icons";
 
 const Layout = () => {
    return (
@@ -166,14 +180,14 @@ const Layout = () => {
 
             <div>
                <h2 className="font-bold text-slate-200">FORMACIÓN</h2>
-               <Css className="font-bold" height="50"/>
-               <Javascript className="font-bold" height="50"/>
-               <Php className="font-bold" height="50"/>
-               <ReactIcon className="font-bold" height="50"/>
-               <Typescript className="font-bold" height="50"/>
-               <Tailwind className="font-bold" height="50"/>
-               <Git className="font-bold" height="50"/>
-               <Mysql className="font-bold" height="50"/>
+               <Css className="font-bold" height="50" />
+               <Javascript className="font-bold" height="50" />
+               <Php className="font-bold" height="50" />
+               <ReactIcon className="font-bold" height="50" />
+               <Typescript className="font-bold" height="50" />
+               <Tailwind className="font-bold" height="50" />
+               <Git className="font-bold" height="50" />
+               <Mysql className="font-bold" height="50" />
             </div>
             <div>
                <h2>Proyectos</h2>
