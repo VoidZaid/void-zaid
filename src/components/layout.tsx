@@ -13,11 +13,16 @@ import {
    Php,
    Mysql,
    Git,
+   Wordpress,
 } from "./icons";
+
+const ICON_SKILLS = {
+   height: '80'
+}
 
 const Layout = () => {
    return (
-      <main className="relative flex flex-col bg-cyan-900 text-slate-400 overflow-hidden md:py-40">
+      <main className="relative flex flex-col bg-cyan-900 text-slate-400 overflow-hidden">
          <div
             className="max-w-7xl mx-auto z-10 px-6 pt-6 h-customMobile flex flex-col  text-slate-200 pb-2 gap-2
             lg:w-1/2"
@@ -29,7 +34,7 @@ const Layout = () => {
                web
             </p>
             <img
-               className="mx-auto my-10 w-full"
+               className="mx-auto my-10 w-full max-w-xl"
                src="https://media.istockphoto.com/id/1182146951/es/foto/joven-riendo-de-pie-contra-un-fondo-gris.jpg?s=612x612&w=0&k=20&c=AVtbOJd_p74jus3tkJAu7Pa7QPz7_mfZCFL9slbu9_g="
                alt="void_zaid developer"
             />
@@ -178,16 +183,20 @@ const Layout = () => {
                </div>
             </div>
 
-            <div>
-               <h2 className="font-bold text-slate-200">FORMACIÓN</h2>
-               <Css className="font-bold" height="50" />
-               <Javascript className="font-bold" height="50" />
-               <Php className="font-bold" height="50" />
-               <ReactIcon className="font-bold" height="50" />
-               <Typescript className="font-bold" height="50" />
-               <Tailwind className="font-bold" height="50" />
-               <Git className="font-bold" height="50" />
-               <Mysql className="font-bold" height="50" />
+            <div className="">
+               <h2 className="font-bold text-slate-200">SKILLS</h2>
+               <div className="flex justify-evenly flex-wrap gap-x-10 gap-y-6
+               sm:gap-x-20 lg:gap-x-10">
+                  <Css className="" height={ICON_SKILLS.height} />
+                  <Javascript className="" height={ICON_SKILLS.height} />
+                  <Php className="" height={ICON_SKILLS.height} />
+                  <ReactIcon className="" height={ICON_SKILLS.height} />
+                  <Typescript className="" height={ICON_SKILLS.height} />
+                  <Tailwind className="" height={ICON_SKILLS.height} />
+                  <Git className="" height={ICON_SKILLS.height} />
+                  <Mysql className="" height={ICON_SKILLS.height} />
+                  <Wordpress className="" height={ICON_SKILLS.height} />
+               </div>
             </div>
             <div>
                <h2>Proyectos</h2>

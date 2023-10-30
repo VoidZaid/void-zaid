@@ -147,7 +147,7 @@ l22 -70 0 -865 0 -865 -23 -80 c-36 -123 -94 -207 -196 -282 -162 -120 -367
 export const Css = ({ className, height }: Icon) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={`fill-orange-500 stroke-slate-50 ${className}`}
       height={height}
       viewBox="0 0 24 24"
       strokeWidth="2"
@@ -164,7 +164,7 @@ export const Css = ({ className, height }: Icon) => (
 export const Javascript = ({ className, height }: Icon) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={`fill-yellow-500 stroke-slate-50 ${className}`}
       height={height}
       viewBox="0 0 24 24"
       strokeWidth="2"
@@ -182,7 +182,7 @@ export const Javascript = ({ className, height }: Icon) => (
 export const Typescript = ({ className, height }: Icon) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={`stroke-slate-50 `}
       height={height}
       viewBox="0 0 24 24"
       strokeWidth="2"
@@ -202,7 +202,7 @@ export const Typescript = ({ className, height }: Icon) => (
 export const Tailwind = ({ className, height }: Icon) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={`stroke-[#3ebff8] ${className}`}
       height={height}
       viewBox="0 0 24 24"
       strokeWidth="2"
@@ -219,7 +219,7 @@ export const Tailwind = ({ className, height }: Icon) => (
 export const Php = ({ className, height }: Icon) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={`fill-[#8694c1] stroke-[#1d202e] ${className}`}
       height={height}
       viewBox="0 0 24 24"
       strokeWidth="2"
@@ -239,7 +239,7 @@ export const Php = ({ className, height }: Icon) => (
 export const ReactIcon = ({ className, height }: Icon) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={`stroke-[#66dbfb] ${className}`}
       height={height}
       viewBox="0 0 24 24"
       strokeWidth="2"
@@ -295,5 +295,27 @@ export const Mysql = ({ className, height }: Icon) => (
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M13 21c-1.427 -1.026 -3.59 -3.854 -4 -6c-.486 .77 -1.501 2 -2 2c-1.499 -.888 -.574 -3.973 0 -6c-1.596 -1.433 -2.468 -2.458 -2.5 -4c-3.35 -3.44 -.444 -5.27 2.5 -3h1c8.482 .5 6.421 8.07 9 11.5c2.295 .522 3.665 2.254 5 3.5c-2.086 -.2 -2.784 -.344 -3.5 0c.478 1.64 2.123 2.2 3.5 3"></path>
       <path d="M9 7h.01"></path>
+   </svg>
+);
+
+export const Wordpress = ({ className, height }: Icon) => (
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      height={height}
+      viewBox="0 0 24 24"
+      strokeWidth="2"
+      stroke="currentColor"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+   >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M9.5 9h3"></path>
+      <path d="M4 9h2.5"></path>
+      <path d="M11 9l3 11l4 -9"></path>
+      <path d="M5.5 9l3.5 11l3 -7"></path>
+      <path d="M18 11c.177 -.528 1 -1.364 1 -2.5c0 -1.78 -.776 -2.5 -1.875 -2.5c-.898 0 -1.125 .812 -1.125 1.429c0 1.83 2 2.058 2 3.571z"></path>
+      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
    </svg>
 );
