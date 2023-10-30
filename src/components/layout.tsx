@@ -1,25 +1,15 @@
-import React from "react";
-import {
-   Github,
-   Linkedin,
-   Facebook,
-   Continental,
-   Alura,
-} from "./icons";
+// import React from "react";
+import { Github, Linkedin, Facebook, Continental, Alura } from "./icons";
 
-import { ReactLogo } from "./vectorLogos";
-
-const ICON_SKILLS = {
-   height: "80",
-   className: "stroke-slate-50 fill-transparent",
-};
+import * as Logos from "./vectorLogos";
+import { ICONS_SKILLS } from "../Constants";
 
 const Layout = () => {
    return (
       <main className="relative flex flex-col bg-cyan-900 text-slate-400 overflow-hidden">
          <div
-            className="max-w-7xl mx-auto z-10 px-6 pt-6 h-customMobile flex flex-col  text-slate-200 pb-2 gap-2
-            lg:w-1/2"
+            className="max-w-5xl mx-auto z-10 px-6 pt-6 h-customMobile flex flex-col  text-slate-200 pb-2 gap-2
+            lg:w-1/2 lg:px-0"
          >
             <h1 className="text-4xl font-bold pb-4">Paúl Díaz</h1>
             <h2 className="text-xl font-medium">Web Developer</h2>
@@ -27,11 +17,12 @@ const Layout = () => {
                Hola, mi nombre es Paúl Díaz y construyo páginas y aplicaciones
                web
             </p>
-            <img
-               className="mx-auto my-10 w-full max-w-xl"
-               src="https://media.istockphoto.com/id/1182146951/es/foto/joven-riendo-de-pie-contra-un-fondo-gris.jpg?s=612x612&w=0&k=20&c=AVtbOJd_p74jus3tkJAu7Pa7QPz7_mfZCFL9slbu9_g="
-               alt="void_zaid developer"
-            />
+            <div className="rounded-full overflow-hidden w-1/2 h-1/2 mx-auto shadow-inner shadow-[#0008]">
+               <img
+                  className="object-cover"
+                  src="./src/assets/img/void_zaid.jfif"
+               />
+            </div>
             <div className="mx-auto text-5xl font-bold">{"<coder/>"}</div>
             <nav className="hidden">
                <ul>
@@ -92,8 +83,8 @@ const Layout = () => {
          <hr />
 
          <section
-            className="max-w-7xl mx-auto z-10 px-6 mt-10 flex flex-col gap-10 text-slate-400
-            lg:w-1/2"
+            className="max-w-5xl mx-auto z-10 px-6 mt-10 flex flex-col gap-10 text-slate-400
+            lg:w-1/2 lg:px-0"
          >
             <div className="w-full">
                <div className="flex gap-2 flex-col">
@@ -177,14 +168,23 @@ const Layout = () => {
                </div>
             </div>
 
-            <div className="">
+            <div className="flex gap-6 flex-col">
                <h2 className="font-bold text-slate-200">SKILLS</h2>
                <div
-                  className="flex justify-evenly flex-wrap gap-x-10 gap-y-6
-               sm:gap-x-20 lg:gap-x-10"
+                  className="flex justify-evenly flex-wrap gap-x-5 gap-y-6 max-w-sm mx-auto
+                  sm:gap-x-10 sm:max-w-md
+                  md:max-w-lg
+                  lg:gap-x-12 lg:max-w-xl
+                  xl:max-w-2xl"
                >
-                  
-                  <ReactLogo className="h-10" />
+                  <Logos.CssLogo className={ICONS_SKILLS.className} />
+                  <Logos.TailwindLogo className={ICONS_SKILLS.className} />
+                  <Logos.JavascriptLogo className={ICONS_SKILLS.className} />
+                  <Logos.TypeScript className={ICONS_SKILLS.className} />
+                  <Logos.ReactLogo className={ICONS_SKILLS.className} />
+                  <Logos.PhpLogo className={ICONS_SKILLS.className} />
+                  <Logos.WordpressLogo className={ICONS_SKILLS.className} />
+                  <Logos.GitLogo className={ICONS_SKILLS.className} />
                </div>
             </div>
             <div>
