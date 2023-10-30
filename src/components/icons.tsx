@@ -283,7 +283,8 @@ export const Git = ({ className, height }: Icon) => (
 export const Mysql = ({ className, height }: Icon) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      // className={`stroke-[#00546b] ${className}`}
+      className={`${className}`}
       height={height}
       viewBox="0 0 24 24"
       strokeWidth="2"
@@ -319,3 +320,4 @@ export const Wordpress = ({ className, height }: Icon) => (
       <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
    </svg>
 );
+

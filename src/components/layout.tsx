@@ -5,20 +5,14 @@ import {
    Facebook,
    Continental,
    Alura,
-   Css,
-   Javascript,
-   Typescript,
-   Tailwind,
-   ReactIcon,
-   Php,
-   Mysql,
-   Git,
-   Wordpress,
 } from "./icons";
 
+import { ReactLogo } from "./vectorLogos";
+
 const ICON_SKILLS = {
-   height: '80'
-}
+   height: "80",
+   className: "stroke-slate-50 fill-transparent",
+};
 
 const Layout = () => {
    return (
@@ -185,17 +179,12 @@ const Layout = () => {
 
             <div className="">
                <h2 className="font-bold text-slate-200">SKILLS</h2>
-               <div className="flex justify-evenly flex-wrap gap-x-10 gap-y-6
-               sm:gap-x-20 lg:gap-x-10">
-                  <Css className="" height={ICON_SKILLS.height} />
-                  <Javascript className="" height={ICON_SKILLS.height} />
-                  <Php className="" height={ICON_SKILLS.height} />
-                  <ReactIcon className="" height={ICON_SKILLS.height} />
-                  <Typescript className="" height={ICON_SKILLS.height} />
-                  <Tailwind className="" height={ICON_SKILLS.height} />
-                  <Git className="" height={ICON_SKILLS.height} />
-                  <Mysql className="" height={ICON_SKILLS.height} />
-                  <Wordpress className="" height={ICON_SKILLS.height} />
+               <div
+                  className="flex justify-evenly flex-wrap gap-x-10 gap-y-6
+               sm:gap-x-20 lg:gap-x-10"
+               >
+                  
+                  <ReactLogo className="h-10" />
                </div>
             </div>
             <div>
