@@ -8,51 +8,29 @@ const Layout = () => {
    return (
       <main className="relative flex flex-col bg-cyan-900 text-slate-400 overflow-hidden">
          <div
-            className="max-w-5xl mx-auto z-10 px-6 pt-6 h-customMobile flex flex-col  text-slate-200 pb-2 gap-2
-            lg:w-1/2 lg:px-0"
+            className="max-w-5xl mx-auto z-10 px-6 pt-6 h-customMobile flex flex-col content-between text-slate-200 pb-2 gap-10
+            lg:w-1/2 lg:px-0 "
          >
-            <h1 className="text-4xl font-bold pb-4">Paúl Díaz</h1>
-            <h2 className="text-xl font-medium">Web Developer</h2>
-            <p className="tex text-slate-400">
-               Hola, mi nombre es Paúl Díaz y construyo páginas y aplicaciones
-               web
-            </p>
-            <div className="rounded-full overflow-hidden w-1/2 h-1/2 mx-auto shadow-inner shadow-[#0008]">
+            <div>
+               <h1 className="text-4xl font-bold pb-4">Paúl Díaz</h1>
+               <h2 className="text-xl font-medium">Web Developer</h2>
+               <p className="tex text-slate-400">
+                  Hola, mi nombre es Paúl Díaz y construyo páginas y
+                  aplicaciones web
+               </p>
+            </div>
+            <picture className="relative rounded-full flex flex-col items-center justify-center h-full pb-10 gap-10">
                <img
-                  className="object-cover"
+                  className="object-cover rounded-full w-3/4 "
                   src="./src/assets/img/void_zaid.jfif"
                />
-            </div>
-            <div className="mx-auto text-5xl font-bold">{"<coder/>"}</div>
-            <nav className="hidden">
-               <ul>
-                  <li>
-                     <a href=""></a>
-                  </li>
-               </ul>
-            </nav>
-            <nav>
-               <ul>
-                  <li>
-                     <a href=""></a>
-                  </li>
-               </ul>
-            </nav>
-            <nav>
-               <ul>
-                  <li>
-                     <a href=""></a>
-                  </li>
-               </ul>
-            </nav>
-            <nav>
-               <ul>
-                  <li>
-                     <a href=""></a>
-                  </li>
-               </ul>
-            </nav>
-            <ul className="flex gap-6 justify-center mt-auto pb-4">
+               <div>
+                  <span className="animate-glowing bg-clip-text text-transparent
+                  bg-gradient-to-r from-teal-800 to-teal-200
+                  mx-auto text-5xl font-bold">{"<coder/>"}</span>
+               </div>
+            </picture>
+            <ul className="flex gap-6 justify-center pb-4">
                <li>
                   <a
                      href="#"
@@ -80,7 +58,7 @@ const Layout = () => {
             </ul>
          </div>
 
-         <hr />
+         <hr className="max-w-5xl" />
 
          <section
             className="max-w-5xl mx-auto z-10 px-6 mt-10 flex flex-col gap-10 text-slate-400
@@ -117,7 +95,7 @@ const Layout = () => {
             </div>
 
             <div className="flex flex-col gap-6">
-               <h2 className="font-bold text-slate-200">FORMACIÓN</h2>
+               <h2 className="head2">FORMACIÓN</h2>
                <div className="group">
                   <div
                      className=" flex flex-col border-spacing-3 p-3 rounded bg-slate-800/50 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] 
@@ -169,7 +147,8 @@ const Layout = () => {
             </div>
 
             <div className="flex gap-6 flex-col">
-               <h2 className="font-bold text-slate-200">SKILLS</h2>
+               {/* <h2 className="font-bold text-slate-200">SKILLS</h2> */}
+               <h2 className="head2">SKILLS</h2>
                <div
                   className="flex justify-evenly flex-wrap gap-x-5 gap-y-6 max-w-sm mx-auto
                   sm:gap-x-10 sm:max-w-md
