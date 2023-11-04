@@ -175,7 +175,7 @@ const Layout = () => {
                   sm:gap-x-10 sm:max-w-md
                   md:max-w-lg
                   lg:gap-x-12 lg:max-w-xl
-                  xl:max-w-2xl"
+                  xl:max-w-xl"
                >
                   <Logos.CssLogo className={ICONS_SKILLS.className} />
                   <Logos.TailwindLogo className={ICONS_SKILLS.className} />
