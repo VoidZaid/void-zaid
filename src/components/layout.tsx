@@ -1,5 +1,5 @@
 // import React from "react";
-import { Github, Linkedin, Facebook, Continental, Alura } from "./icons";
+import { Github, Linkedin, Facebook, Continental, Alura, ArrowRightUp } from "./icons";
 
 import * as Logos from "./vectorLogos";
 import { ICONS_SKILLS } from "../Constants";
@@ -25,9 +25,13 @@ const Layout = () => {
                   src="./src/assets/img/void_zaid.jfif"
                />
                <div>
-                  <span className="animate-glowing bg-clip-text text-transparent
+                  <span
+                     className="animate-glowing bg-clip-text text-transparent
                   bg-gradient-to-r from-teal-800 to-teal-200
-                  mx-auto text-5xl font-bold">{"<coder/>"}</span>
+                  mx-auto text-5xl font-bold"
+                  >
+                     {"<coder/>"}
+                  </span>
                </div>
             </picture>
             <ul className="flex gap-6 justify-center pb-4">
@@ -120,7 +124,7 @@ const Layout = () => {
                </div>
                <div className="group">
                   <div
-                     className=" flex flex-col border-spacing-3 p-3 rounded bg-slate-800/50 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] 
+                     className="flex flex-col border-spacing-3 p-3 rounded bg-slate-800/50 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] 
                   lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]"
                   >
                      <p className="italic text-sm">Mayo - Julio del 2021</p>
@@ -166,8 +170,76 @@ const Layout = () => {
                   <Logos.GitLogo className={ICONS_SKILLS.className} />
                </div>
             </div>
-            <div>
-               <h2>Proyectos</h2>
+            <div className="flex flex-col gap-3">
+               <h2 className="head2">PROYECTOS</h2>
+               {/* contenedor de los cards */}
+               <div className="flex flex-col gap-4">
+                  <div className="group card">
+                     <figure>
+                        <img id="image" className="rounded border-2 border-slate-200/10 max-w-[200px]
+                        hover:border-slate-200/20
+                        group-hover:border-slate-200/20" src="./src/assets/img/encriptador_texto.png" alt="" />
+                     </figure>
+                     <div>
+                        <h3 className="font-bold text-slate-200 
+                        hover:text-teal-400">
+                           <a className="flex" href="https://voidzaid.github.io/sprint_one_encriptador/" target="blank">Encriptador de texto<ArrowRightUp/></a>
+                        </h3>
+                        <p>Es un challenge del programa ONE, el programa consiste en insertar texto y que este lo devuelva encriptado, asi mismo en la misma pagina se desencripta</p>
+                     </div>
+                  </div>
+                  <div className="group card">
+                     <figure>
+                        <img id="image" className="rounded border-2 border-slate-200/10 max-w-[200px]
+                        hover:border-slate-200/20
+                        group-hover:border-slate-200/20" src="./src/assets/img/ahorcado.png" alt="ahorcado Alura ONE" />
+                     </figure>
+                     <div>
+                        <h3 className="font-bold text-slate-200 
+                        hover:text-teal-400">
+                           <a className="flex" href="https://voidzaid.github.io/sprint_one_ahorcado/" target="blank">Juego del ahorcado<ArrowRightUp/></a>
+                        </h3>
+                        <p>El juego tambien es parte de los challenges del programa ONE, este consiste en desarrollar desde cero el juego del ahorcado dando oportunidades y posibilidad de escoger una palabra para el juego</p>
+                     </div>
+                  </div>
+                  <div className="group card">
+                     <figure>
+                        <img id="image" className="rounded border-2 border-slate-200/10 max-w-[200px]
+                        hover:border-slate-200/20
+                        group-hover:border-slate-200/20" src="./src/assets/img/tiendeo.png" alt="ahorcado Alura ONE" />
+                     </figure>
+                     <div className="flex flex-col gap-1">
+                        <h3 className="font-bold text-slate-200 
+                        hover:text-teal-400">
+                           <a className="flex" href="https://voidzaid.github.io/ecommerce/" target="blank">Tiendeo - ecommerce<ArrowRightUp/></a>
+                        </h3>
+                        <p>Es un challenge del programa ONE, el programa consiste en insertar texto y que este lo devuelva encriptado, asi mismo en la misma pagina se desencripta</p>
+                        <ul className="flex text-xs gap-2 pt-2 font-bold text-teal-400">
+                           <li className="bg-teal-500/20 px-3 py-1 rounded-2xl"><span>CSS</span></li>
+                           <li className="bg-teal-500/20 px-3 py-1 rounded-2xl"><span>JavaScript</span></li>
+                           <li className="bg-teal-500/20 px-3 py-1 rounded-2xl"><span>Atomic desing</span></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div className="group card">
+                     <figure>
+                        <img id="image" className="rounded border-2 border-slate-200/10 max-w-[200px]
+                        hover:border-slate-200/20
+                        group-hover:border-slate-200/20" src="./src/assets/img/connect_4.png" alt="ahorcado Alura ONE" />
+                     </figure>
+                     <div className="flex flex-col gap-1">
+                        <h3 className="font-bold text-slate-200 
+                        hover:text-teal-400">
+                           <a className="flex" href="https://voidzaid.github.io/connect-4/" target="blank">Connect-4<ArrowRightUp/></a>
+                        </h3>
+                        <p>Es un challenge del programa ONE, el programa consiste en insertar texto y que este lo devuelva encriptado, asi mismo en la misma pagina se desencripta</p>
+                        <ul className="flex text-xs gap-2 pt-2 font-bold text-teal-400">
+                           <li className="bg-teal-500/20 px-3 py-1 rounded-2xl"><span>JavaScript</span></li>
+                           <li className="bg-teal-500/20 px-3 py-1 rounded-2xl"><span>React</span></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
             </div>
          </section>
 
