@@ -65,7 +65,7 @@ const Layout = () => {
          <hr className="max-w-5xl" />
 
          <section
-            className="max-w-5xl mx-auto z-10 px-6 mt-10 flex flex-col gap-10 text-slate-400
+            className="max-w-5xl mx-auto z-10 px-6 mt-10 flex flex-col gap-20 text-slate-400
             lg:w-1/2 lg:px-0"
          >
             <div className="w-full">
@@ -97,7 +97,7 @@ const Layout = () => {
                   </p>
                </div>
             </div>
-
+            {/* FORMACION */}
             <div className="flex flex-col gap-6">
                <h2 className="head2">FORMACIÓN</h2>
                <div className="group">
@@ -149,9 +149,8 @@ const Layout = () => {
                   </div>
                </div>
             </div>
-
-            <div className="flex gap-6 flex-col">
-               {/* <h2 className="font-bold text-slate-200">SKILLS</h2> */}
+            {/* SKILLS */}
+            <div className="flex gap-10 flex-col">
                <h2 className="head2">SKILLS</h2>
                <div
                   className="flex justify-evenly flex-wrap gap-x-5 gap-y-6 max-w-sm mx-auto
@@ -170,10 +169,10 @@ const Layout = () => {
                   <Logos.GitLogo className={ICONS_SKILLS.className} />
                </div>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-6">
                <h2 className="head2">PROYECTOS</h2>
                {/* contenedor de los cards */}
-               <div className="flex flex-col gap-4">
+               <div className="flex flex-col gap-14">
                   <div className="group card">
                      <figure>
                         <img id="image" className="rounded border-2 border-slate-200/10 max-w-[200px]

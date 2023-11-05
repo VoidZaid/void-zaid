@@ -1,4 +1,3 @@
-import React from "react";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import {
@@ -7,7 +6,7 @@ import {
    CursorArrowRaysIcon,
    XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronDownIcon, PhoneIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon} from "@heroicons/react/20/solid";
 
 import { Logo, Facebook, Github, Linkedin } from "./icons";
 

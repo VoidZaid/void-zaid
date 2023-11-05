@@ -2,5 +2,8 @@
    @apply font-bold text-slate-200;
 }
 .card{
-   @apply flex flex-col-reverse gap-6 border-spacing-3 p-3 rounded bg-slate-800/50 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
+   @apply flex flex-col-reverse gap-6 border-spacing-3 p-3 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:rounded lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
 }
+/* .card{
+   @apply flex flex-col-reverse gap-6 border-spacing-3 p-3 rounded bg-slate-800/50 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
+} */
