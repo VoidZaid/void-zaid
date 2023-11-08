@@ -1,13 +1,13 @@
 import { FC} from "react";
 
-interface Form {
+interface Formation {
    date: string;
    institution: string;
    profession: string;
    icon:any;
    resume: string;
 }
-const FormCard: FC<Form> = ({
+const FormationCard: FC<Formation> = ({
    date,
    institution,
    profession,
@@ -15,7 +15,7 @@ const FormCard: FC<Form> = ({
    resume,
 }) => {
    return (
-      <div className="group">
+      <div className="group ">
          <div
             className=" flex flex-col border-spacing-3 p-3 rounded bg-slate-800/50 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] 
                   lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]"
@@ -32,4 +32,4 @@ const FormCard: FC<Form> = ({
    );
 };
 
-export default FormCard;
+export default FormationCard;

@@ -1,77 +1,84 @@
 // import React from "react";
 import { Github, Linkedin, Facebook, ArrowRightUp } from "./icons";
-import BgEffect from "./bg_effect";
+import BgCircle from "./bg_effect/bg_effect";
+import BgColor from "./bg_effect/bg_color";
 import { TRAINING } from "./constants_info";
-import FormCard from "./form_card";
+import FormationCard from "./card_formation";
+import Section from "./layout/section";
 
 import * as Logos from "./vectorLogos";
 import { ICONS_SKILLS } from "../Constants";
 
 const Layout = () => {
    return (
-      <main className="relative flex flex-col bg-cyan-900 text-slate-400 overflow-hidden">
-         <div
-            className="relative max-w-5xl mx-auto z-10 px-6 pt-6 h-customMobile flex flex-col content-between text-slate-200 pb-2 gap-10
+      <main className="">
+         <Section>
+            <BgCircle z_index="" />
+            <BgColor/>
+            <div
+               className="relative max-w-5xl mx-auto z-10 px-6 pt-6 h-customMobile flex flex-col content-between text-slate-200 pb-2 gap-10 border-0
             lg:w-1/2 lg:px-0 "
-         >
-            <div>
-               <h1 className="text-4xl font-bold pb-4">Paúl Díaz</h1>
-               <h2 className="text-xl font-medium">Web Developer</h2>
-               <p className="tex text-slate-400">
-                  Hola, mi nombre es Paúl Díaz y construyo páginas y
-                  aplicaciones web
-               </p>
-            </div>
-            <picture className="relative rounded-full flex flex-col items-center justify-center h-full pb-10 gap-10">
-               <img
-                  className="object-cover rounded-full w-3/4 "
-                  src="./src/assets/img/void_zaid.jfif"
-               />
+            >
                <div>
-                  <span
-                     className="animate-glowing bg-clip-text text-transparent
+                  <h1 className="text-4xl font-bold pb-4">Paúl Díaz</h1>
+                  <h2 className="text-xl font-medium">Web Developer</h2>
+                  <p className="tex text-slate-400">
+                     Hola, mi nombre es Paúl Díaz y construyo páginas y
+                     aplicaciones web
+                  </p>
+               </div>
+               <picture className="relative rounded-full flex flex-col items-center justify-center h-full pb-10 gap-10">
+                  <img
+                     className="object-cover rounded-full w-3/4 "
+                     src="./src/assets/img/void_zaid.jfif"
+                  />
+                  <div>
+                     <span
+                        className="animate-glowing bg-clip-text text-transparent
                   bg-gradient-to-r from-teal-800 to-teal-200
                   mx-auto text-5xl font-bold"
-                  >
-                     {"<coder/>"}
-                  </span>
-               </div>
-            </picture>
-            <ul className="flex gap-6 justify-center pb-4">
-               <li>
-                  <a
-                     href="#"
-                     className="text-sm font-semibold leading-6 text-gray-900"
-                  >
-                     <Github className="stroke-teal-500" height="40" />
-                  </a>
-               </li>
-               <li>
-                  <a
-                     href="#"
-                     className="text-sm font-semibold leading-6 text-gray-900"
-                  >
-                     <Linkedin className="stroke-teal-500" height="40" />
-                  </a>
-               </li>
-               <li>
-                  <a
-                     href="#"
-                     className="text-sm font-semibold leading-6 text-gray-900"
-                  >
-                     <Facebook className="stroke-teal-500" height="40" />
-                  </a>
-               </li>
-            </ul>
-         </div>
+                     >
+                        {"<coder/>"}
+                     </span>
+                  </div>
+               </picture>
+               <ul className="flex gap-6 justify-center pb-4">
+                  <li>
+                     <a
+                        href="#"
+                        className="text-sm font-semibold leading-6 text-gray-900"
+                     >
+                        <Github className="stroke-teal-500" height="40" />
+                     </a>
+                  </li>
+                  <li>
+                     <a
+                        href="#"
+                        className="text-sm font-semibold leading-6 text-gray-900"
+                     >
+                        <Linkedin className="stroke-teal-500" height="40" />
+                     </a>
+                  </li>
+                  <li>
+                     <a
+                        href="#"
+                        className="text-sm font-semibold leading-6 text-gray-900"
+                     >
+                        <Facebook className="stroke-teal-500" height="40" />
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </Section>
 
-         <hr className="max-w-5xl" />
+         {/* <hr className="max-w-5xl "></hr> */}
 
-         <div
-            className="max-w-5xl mx-auto z-10 px-6 mt-10 flex flex-col gap-20 text-slate-400
+         <Section>
+            <BgColor/>
+            <div
+               className="max-w-5xl mx-auto z-10 px-6 mt-10 flex flex-col gap-20 text-slate-400
             lg:w-1/2 lg:px-0"
-         >
-            <section className="w-full">
+            >
                <div className="flex gap-2 flex-col relative">
                   <p>
                      <span id="sobre_mi">Hola</span>, soy de Perú y tengo 25
@@ -99,12 +106,18 @@ const Layout = () => {
                      ahora
                   </p>
                </div>
-            </section>
+            </div>
+         </Section>
+
+         <div
+            className="max-w-5xl mx-auto z-10 px-6 mt-10 flex flex-col gap-20 text-slate-400
+            lg:w-1/2 lg:px-0"
+         >
             {/* FORMACION */}
             <section className="flex flex-col gap-6">
                <h2 className="head2">FORMACIÓN</h2>
                {TRAINING.map((item, id) => (
-                  <FormCard
+                  <FormationCard
                      key={id}
                      date={item.date}
                      institution={item.institution}
@@ -295,18 +308,12 @@ const Layout = () => {
          </div>
 
          {/* se viene el efecto de fondo circular desvanecido con gradiente*/}
-         <BgEffect className="" item="items-end"/>
-         <BgEffect className="" item="items-end"/>
-         <BgEffect className="" item="items-end"/>
-         <BgEffect className="" item="items-end"/>
-         <BgEffect className="" item="items-end"/>
-         <BgEffect className="" item="items-center"/>
-         <BgEffect className="" item="items-center"/>
+         {/* <BgEffect z_index="" /> */}
          {/* este es la capa que le da un efecto ocurecido a el bg-cyan y al efecto de fondo con degradado*/}
-         <div
+         {/* <div
             aria-hidden="true"
             className="absolute items inset-0 w-full h-full bg-[#020314] opacity-80"
-         ></div>
+         ></div> */}
       </main>
    );
 };
