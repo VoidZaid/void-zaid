@@ -59,20 +59,20 @@ export const info_projects = [
 export const info_menu = [
    {
       title: "Sobre mi",
-      id: "#about_me",
+      id: "about_me",
    },
    {
       title: "Formación",
-      id: "#formation",
+      id: "formation",
    },
    {
       title: "Skills",
-      id: "#skills",
+      id: "skills",
       submenu:undefined
    },
    {
       title: "Projects",
-      id: "#projects",
+      id: "projects",
       // submenu: [
       //    {
       //       name: "Analytics",

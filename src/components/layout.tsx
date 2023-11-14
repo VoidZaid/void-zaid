@@ -1,4 +1,5 @@
 // import React from "react";
+
 import BgCircle from "./bg_effect/bg_circle";
 import BgColor from "./bg_effect/bg_color";
 import { TRAINING, info_projects, info_menu } from "./constants_info";
@@ -81,7 +82,7 @@ const Layout = () => {
                            </span>
                         </div>
                      </picture>
-                     <nav className="hidden lg:block lg:w-full text-xs">
+                     <nav className="hidden lg:block">
                         <ul className="">
                         {
                            info_menu.map((e,id)=>(
