@@ -1,12 +1,13 @@
 import {FC, ReactNode} from 'react';
 type Section ={
    className?:string,
+   id?:string,
    children: ReactNode
 }
 
-const Section: FC<Section> = ({className, children}) => {
+const Section: FC<Section> = ({className, id, children}) => {
   return (
-    <section className={`relative flex flex-col bg-cyan-900 text-slate-400 overflow-hidden ${className}`}>
+    <section id={id} className={`relative flex flex-col px-4 bg-cyan-900 sm:px-10 lg:static lg:bg-none lg:bg-transparent ${className}`}>
       {children}
     </section>
   )

@@ -16,6 +16,9 @@ export default {
          },
          animation:{
             glowing: 'glowing 2s linear infinite'
+         },
+         backgroundImage:{
+            radialGradient: 'radial-gradient(circle, var(--tw-gradient-stops))'
          }
       },
    plugins: [],
