@@ -1,10 +1,11 @@
 // import React from "react";
 import BgCircle from "./bg_effect/bg_circle";
 import BgColor from "./bg_effect/bg_color";
-import { TRAINING, info_projects } from "./constants_info";
+import { TRAINING, info_projects, info_menu } from "./constants_info";
 // CARDS
 import FormationCard from "./layout/card_formation";
 import CardProjects from "./layout/card_projects";
+import Btn_desktop from "./btn_desktop_menu";
 // CONTAINER
 import Section from "./layout/section";
 import Container from "./layout/container";
@@ -18,30 +19,30 @@ const Layout = () => {
          <BgCircle className="lg:z-0"/>
          <BgColor className=""/>
          <div className="max-w-screen-xl lg:flex lg:relative lg:w-full lg:mx-auto lg:justify-between">
-            <Section className="lg:z-10 lg:w-1/2 lg:sticky lg:top-0 lg:h-screen ">
+            <Section className="lg:z-10 lg:w-1/2 lg:sticky lg:top-0 lg:h-screen lg:pt-24">
                <BgCircle className="lg:hidden" />
                <BgColor className="lg:hidden"/>
                <Container
                   className="h-customMobile pb-0
             sm:h-auto sm:py-8
-            lg:w-full"
+            lg:w-full lg:pt-0 lg:h-full lg:pb-0"
                >
                   <div
                      className="flex flex-col items-center h-full
-               sm:h-auto"
+               sm:h-auto lg:items-start lg:pl-8"
                   >
                      <div
                         className="text-slate-200 
-                  sm:flex sm:flex-col sm:gap-4 md:gap-8"
+                  sm:flex sm:flex-col sm:gap-4 md:gap-8 lg:gap-3"
                      >
                         <h1
                            className="text-4xl font-bold pt-8 pb-4
-                     sm:pb-0"
+                     sm:pb-0 lg:pt-0 lg:text-6xl"
                         >
                            Paúl Díaz
                         </h1>
                         <h2 className="text-xl font-medium">Web Developer</h2>
-                        <p className="tex text-slate-400">
+                        <p className="tex text-slate-400 lg:w-3/4">
                            Hola, mi nombre es Paúl Díaz y construyo páginas y
                            aplicaciones web
                         </p>
@@ -63,10 +64,10 @@ const Layout = () => {
                      </div>
                      <picture
                         className="relative flex flex-col items-center justify-center gap-10 h-full pb-10  
-                  sm:gap-10 sm:pb-0 sm:h-auto sm:pt-8"
+                  sm:gap-10 sm:pb-0 sm:h-auto sm:pt-8 lg:items-start lg:w-full"
                      >
                         <img
-                           className="object-cover rounded-full w-3/4 lg:max-w-xs"
+                           className="object-cover rounded-full w-3/4 lg:max-w-xs lg:w-2/4"
                            src="./src/assets/img/void_zaid.jfif"
                         />
                         <div>
@@ -80,9 +81,18 @@ const Layout = () => {
                            </span>
                         </div>
                      </picture>
+                     <nav className="hidden lg:block lg:w-full text-xs">
+                        <ul className="">
+                        {
+                           info_menu.map((e,id)=>(
+                              <Btn_desktop key={id} title={e.title} id={e.id}/>
+                           ))
+                        }
+                        </ul>
+                     </nav>
                   </div>
                   {/* SOCIAL MEDIA ICONS */}
-                  <ul className="flex gap-6 justify-center pb-6 mt-auto sm:pb-0">
+                  <ul className="flex gap-6 justify-center pb-6 mt-auto sm:pb-0 lg:justify-start lg:pl-8">
                      {icons_media.map((e, id) => (
                         <li key={id}>
                            <a
@@ -99,7 +109,7 @@ const Layout = () => {
             {/* <div className="h-[1px] bg-red-200/10"></div> */}
             {/* ABOUT ME SECTION */}
             <div className="lg:w-1/2">
-               <Section id="about_me" className="pt-16 sm:pt-10">
+               <Section id="about_me" className="pt-16 sm:pt-10 lg:pt-24">
                   <BgColor className="lg:hidden"/>
                   <Container className="">
                      <div className="flex gap-2 flex-col relative">
