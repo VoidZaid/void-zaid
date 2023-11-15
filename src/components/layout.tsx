@@ -13,6 +13,10 @@ import Container from "./layout/container";
 // ICONS
 import { icons_media } from "./icons_media";
 import { Logos } from "./icons_skills";
+//IMG 
+// @ts-ignore
+import Perfil from "../assets/img/void_zaid.jfif?url";
+
 
 const Layout = () => {
    return (
@@ -69,7 +73,7 @@ const Layout = () => {
                      >
                         <img
                            className="object-cover rounded-full w-3/4 lg:max-w-xs lg:w-2/4"
-                           src="./src/assets/img/void_zaid.jfif"
+                           src={Perfil}
                         />
                         <div>
                            <span
@@ -147,7 +151,7 @@ const Layout = () => {
 
                {/* FORMACION */}
                <Section id="formation" className="">
-                  <BgCircle className="lg:hidden md:h-40"/>
+                  <BgCircle className="lg:hidden md:h-20"/>
                   <BgColor  className="lg:hidden"/>
                   <Container className="gap-8">
                      <h2 className="head2">FORMACIÓN</h2>

@@ -1,26 +1,31 @@
-import { MouseEventHandler } from "react";
-
 interface Icon {
    className: string;
 }
 
-export const Logo = ({ onClick }: { onClick?: MouseEventHandler }) => (
-   <img
-      onClick={onClick}
-      className="w-32 md:w-24"
-      src="./src/assets/img/void zaid.svg"
-      alt=""
-   />
-);
-
-export const ArrowRightUp=()=>(
-   <svg xmlns="http://www.w3.org/2000/svg" className="" width="20" height="20" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M17 7l-10 10"></path>
-   <path d="M8 7l9 0l0 9"></path>
-</svg>
+// IMPORTANT: when we build our project the file PUBLIC hava a special treat, VITE just make a copy of the elements and add thios to the DIST file, there we can put our images an static content - put the SRC attr thinking u are in index.html
+export const Logo = ({className}:Icon)=>(
+   <img src="./img/logo.svg" alt="" className={className}/>
 )
-export const Continental = ({ className}: Icon) => (
+
+export const ArrowRightUp = () => (
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className=""
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      strokeWidth="2"
+      stroke="currentColor"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+   >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M17 7l-10 10"></path>
+      <path d="M8 7l9 0l0 9"></path>
+   </svg>
+);
+export const Continental = ({ className }: Icon) => (
    <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
@@ -98,197 +103,73 @@ l22 -70 0 -865 0 -865 -23 -80 c-36 -123 -94 -207 -196 -282 -162 -120 -367
 );
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export const Css = ({ className, height }: Icon) => (
+// export const Logo = ({className}:Icon) => (
 //    <svg
+//       version="1.0"
 //       xmlns="http://www.w3.org/2000/svg"
-//       className={`fill-orange-500 stroke-slate-50 ${className}`}
-//       height={height}
-//       viewBox="0 0 24 24"
-//       strokeWidth="2"
-//       stroke="currentColor"
-//       fill="none"
-//       strokeLinecap="round"
-//       strokeLinejoin="round"
-//    >
-//       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-//       <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
-//       <path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path>
-//    </svg>
-// );
-// export const Javascript = ({ className, height }: Icon) => (
-//    <svg
-//       xmlns="http://www.w3.org/2000/svg"
-//       className={`fill-yellow-500 stroke-slate-50 ${className}`}
-//       height={height}
-//       viewBox="0 0 24 24"
-//       strokeWidth="2"
-//       stroke="currentColor"
-//       fill="none"
-//       strokeLinecap="round"
-//       strokeLinejoin="round"
-//    >
-//       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-//       <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
-//       <path d="M7.5 8h3v8l-2 -1"></path>
-//       <path d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5"></path>
-//    </svg>
-// );
-// export const Typescript = ({ className, height }: Icon) => (
-//    <svg
-//       xmlns="http://www.w3.org/2000/svg"
-//       className={`stroke-slate-50 `}
-//       height={height}
-//       viewBox="0 0 24 24"
-//       strokeWidth="2"
-//       stroke="currentColor"
-//       fill="none"
-//       strokeLinecap="round"
-//       strokeLinejoin="round"
-//    >
-//       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-//       <path d="M15 17.5c.32 .32 .754 .5 1.207 .5h.543c.69 0 1.25 -.56 1.25 -1.25v-.25a1.5 1.5 0 0 0 -1.5 -1.5a1.5 1.5 0 0 1 -1.5 -1.5v-.25c0 -.69 .56 -1.25 1.25 -1.25h.543c.453 0 .887 .18 1.207 .5"></path>
-//       <path d="M9 12h4"></path>
-//       <path d="M11 12v6"></path>
-//       <path d="M21 19v-14a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2 -2z"></path>
-//    </svg>
-// );
-
-// export const Tailwind = ({ className, height }: Icon) => (
-//    <svg
-//       xmlns="http://www.w3.org/2000/svg"
-//       className={`stroke-[#3ebff8] ${className}`}
-//       height={height}
-//       viewBox="0 0 24 24"
-//       strokeWidth="2"
-//       stroke="currentColor"
-//       fill="none"
-//       strokeLinecap="round"
-//       strokeLinejoin="round"
-//    >
-//       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-//       <path d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z"></path>
-//    </svg>
-// );
-
-// export const Php = ({ className, height }: Icon) => (
-//    <svg
-//       xmlns="http://www.w3.org/2000/svg"
-//       className={`fill-[#8694c1] stroke-[#1d202e] ${className}`}
-//       height={height}
-//       viewBox="0 0 24 24"
-//       strokeWidth="2"
-//       stroke="currentColor"
-//       fill="none"
-//       strokeLinecap="round"
-//       strokeLinejoin="round"
-//    >
-//       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-//       <path d="M12 12m-10 0a10 9 0 1 0 20 0a10 9 0 1 0 -20 0"></path>
-//       <path d="M5.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653"></path>
-//       <path d="M15.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653"></path>
-//       <path d="M12 7.5l-1 5.5"></path>
-//       <path d="M11.6 10h2.4l-.5 3"></path>
-//    </svg>
-// );
-// export const ReactIcon = ({ className, height }: Icon) => (
-//    <svg
-//       xmlns="http://www.w3.org/2000/svg"
-//       className={`stroke-[#66dbfb] ${className}`}
-//       height={height}
-//       viewBox="0 0 24 24"
-//       strokeWidth="2"
-//       stroke="currentColor"
-//       fill="none"
-//       strokeLinecap="round"
-//       strokeLinejoin="round"
-//    >
-//       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-//       <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"></path>
-//       <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"></path>
-//       <path d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2"></path>
-//       <path d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2"></path>
-//       <path d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896"></path>
-//       <path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897"></path>
-//       <path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z"></path>
-//    </svg>
-// );
-// export const Git = ({ className, height }: Icon) => (
-//    <svg
-//       xmlns="http://www.w3.org/2000/svg"
+//       height="0"
+//       viewBox="0 0 592.000000 258.000000"
+//       preserveAspectRatio="xMidYMid meet"
 //       className={className}
-//       height={height}
-//       viewBox="0 0 24 24"
-//       strokeWidth="2"
-//       stroke="currentColor"
-//       fill="none"
-//       strokeLinecap="round"
-//       strokeLinejoin="round"
 //    >
-//       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-//       <path d="M16 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-//       <path d="M12 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-//       <path d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-//       <path d="M12 15v-6"></path>
-//       <path d="M15 11l-2 -2"></path>
-//       <path d="M11 7l-1.9 -1.9"></path>
-//       <path d="M13.446 2.6l7.955 7.954a2.045 2.045 0 0 1 0 2.892l-7.955 7.955a2.045 2.045 0 0 1 -2.892 0l-7.955 -7.955a2.045 2.045 0 0 1 0 -2.892l7.955 -7.955a2.045 2.045 0 0 1 2.892 0z"></path>
+//       <g
+//          transform="translate(0.000000,258.000000) scale(0.100000,-0.100000)"
+//          stroke="none"
+//       >
+//          <path
+//             d="M2920 2517 c0 -9 5 -19 10 -22 6 -4 7 -11 4 -17 -5 -7 -15 -1 -29 16
+// l-22 28 -346 -48 c-190 -27 -344 -52 -341 -55 8 -13 -17 -21 -30 -10 -9 8 -42
+// 7 -117 -4 -212 -30 -760 -107 -1324 -185 -319 -44 -590 -82 -602 -85 -56 -13
+// -53 32 -53 -824 0 -632 3 -791 13 -805 10 -13 41 -22 120 -33 l107 -16 31 34
+// c30 32 32 33 45 14 18 -24 18 -35 -1 -35 -26 0 -16 -18 12 -24 16 -3 129 -20
+// 252 -37 172 -23 230 -28 248 -20 32 15 43 14 43 -3 0 -8 12 -17 28 -20 47 -9
+// 1181 -166 1189 -165 4 1 15 0 23 -4 8 -3 184 -28 390 -56 l375 -52 280 41
+// c154 22 299 43 322 45 113 13 760 106 773 112 8 3 24 5 35 4 11 -1 225 28 475
+// 64 250 36 462 66 470 66 81 6 484 69 495 79 13 11 15 113 15 804 0 639 -3 796
+// -13 810 -11 15 -216 46 -1393 211 -758 106 -1403 196 -1431 200 -44 6 -53 4
+// -53 -8z m-943 -657 l48 0 -3 -545 -2 -545 -110 0 -110 0 0 545 0 545 45 0 c25
+// 0 45 5 45 10 0 7 6 7 19 0 11 -5 41 -10 68 -10z m-516 -10 c60 -16 111 -61
+// 142 -123 40 -83 50 -188 44 -477 -5 -289 -14 -333 -84 -410 -50 -56 -92 -75
+// -186 -85 -139 -14 -257 26 -311 106 -26 37 -56 128 -56 166 0 13 -3 23 -7 23
+// -11 0 3 557 15 602 24 91 67 148 140 187 54 29 213 34 303 11z m-991 8 c1 -2
+// 14 -75 30 -163 17 -88 32 -175 34 -193 10 -81 60 -358 65 -364 3 -4 30 144 60
+// 330 29 185 56 349 58 365 l6 27 98 0 c55 0 99 -4 99 -9 0 -5 -36 -198 -80
+// -429 -44 -231 -82 -433 -84 -448 -3 -16 -12 -68 -22 -116 -20 -100 -11 -95
+// -155 -90 l-95 3 -98 517 c-54 284 -100 529 -103 545 l-5 27 96 0 c53 0 96 -1
+// 96 -2z m2049 -8 c116 -11 192 -45 234 -105 46 -68 57 -149 56 -435 -1 -281 -2
+// -311 -13 -328 -4 -7 -5 -16 -2 -21 4 -5 3 -11 -1 -13 -5 -1 -19 -24 -32 -50
+// -13 -26 -40 -58 -61 -73 -68 -47 -116 -55 -327 -55 l-193 0 0 538 c0 296 3
+// 542 7 545 9 10 222 8 332 -3z m1229 -50 c2 -46 -6 -81 -48 -200 -28 -80 -49
+// -153 -46 -162 2 -10 1 -16 -3 -13 -10 5 -62 -139 -64 -177 -1 -14 -5 -24 -8
+// -22 -6 4 -109 -277 -109 -297 0 -5 61 -9 140 -9 122 0 140 -2 140 -16 0 -12 7
+// -15 25 -12 13 3 22 1 19 -3 -3 -5 -14 -9 -25 -9 -16 0 -19 -7 -19 -55 l0 -55
+// -250 0 -250 0 0 68 c0 72 -6 52 199 641 39 112 71 208 71 212 0 5 -58 9 -130
+// 9 l-130 0 0 73 c0 41 3 77 7 81 4 3 113 5 242 4 l236 -3 3 -55z m531 8 c6 -29
+// 52 -264 101 -523 49 -258 92 -480 95 -492 5 -23 4 -23 -99 -23 l-104 0 -18
+// 115 -18 115 -87 0 -87 0 -17 -97 c-9 -54 -19 -106 -21 -115 -5 -16 -19 -18
+// -108 -18 l-104 0 14 66 c8 37 13 72 13 78 -1 6 1 18 4 26 3 8 45 215 92 460
+// 48 244 89 448 91 452 3 4 59 8 124 8 l119 0 10 -52z m531 -30 c0 -86 4 -101
+// 30 -111 11 -4 10 -7 -7 -12 l-23 -7 0 -439 0 -439 -110 0 -110 0 0 538 c0 296
+// 3 542 7 545 3 4 53 7 110 7 l103 0 0 -82z m503 72 c152 -15 212 -49 260 -150
+// 21 -43 22 -57 22 -385 0 -337 0 -340 -24 -393 -13 -29 -41 -68 -62 -86 -66
+// -56 -116 -66 -335 -66 l-194 0 0 545 0 545 118 0 c64 0 161 -5 215 -10z"
+//          />
+//          <path
+//             d="M1282 1700 c-47 -19 -52 -55 -52 -390 0 -330 4 -366 48 -389 50 -27
+// 106 -7 128 44 20 50 20 640 0 690 -22 51 -67 67 -124 45z"
+//          />
+//          <path
+//             d="M2408 1694 c-5 -4 -8 -180 -8 -392 l0 -384 55 4 c71 6 107 32 118 84
+// 4 21 7 173 5 336 l-3 298 -27 26 c-20 21 -39 28 -80 32 -29 2 -56 0 -60 -4z"
+//          />
+//          <path
+//             d="M4116 1368 c-15 -106 -24 -201 -21 -211 6 -13 19 -17 61 -17 30 0 54
+// 5 54 10 0 19 -60 403 -63 407 -2 2 -16 -84 -31 -189z"
+//          />
+//          <path
+//             d="M5200 1310 l0 -390 40 0 c56 0 108 24 120 54 13 34 13 637 0 670 -12
+// 32 -63 56 -120 56 l-40 0 0 -390z"
+//          />
+//       </g>
 //    </svg>
 // );
-// export const Mysql = ({ className, height }: Icon) => (
-//    <svg
-//       xmlns="http://www.w3.org/2000/svg"
-//       // className={`stroke-[#00546b] ${className}`}
-//       className={`${className}`}
-//       height={height}
-//       viewBox="0 0 24 24"
-//       strokeWidth="2"
-//       stroke="currentColor"
-//       fill="none"
-//       strokeLinecap="round"
-//       strokeLinejoin="round"
-//    >
-//       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-//       <path d="M13 21c-1.427 -1.026 -3.59 -3.854 -4 -6c-.486 .77 -1.501 2 -2 2c-1.499 -.888 -.574 -3.973 0 -6c-1.596 -1.433 -2.468 -2.458 -2.5 -4c-3.35 -3.44 -.444 -5.27 2.5 -3h1c8.482 .5 6.421 8.07 9 11.5c2.295 .522 3.665 2.254 5 3.5c-2.086 -.2 -2.784 -.344 -3.5 0c.478 1.64 2.123 2.2 3.5 3"></path>
-//       <path d="M9 7h.01"></path>
-//    </svg>
-// );
-
-// export const Wordpress = ({ className, height }: Icon) => (
-//    <svg
-//       xmlns="http://www.w3.org/2000/svg"
-//       className={className}
-//       height={height}
-//       viewBox="0 0 24 24"
-//       strokeWidth="2"
-//       stroke="currentColor"
-//       fill="none"
-//       strokeLinecap="round"
-//       strokeLinejoin="round"
-//    >
-//       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-//       <path d="M9.5 9h3"></path>
-//       <path d="M4 9h2.5"></path>
-//       <path d="M11 9l3 11l4 -9"></path>
-//       <path d="M5.5 9l3.5 11l3 -7"></path>
-//       <path d="M18 11c.177 -.528 1 -1.364 1 -2.5c0 -1.78 -.776 -2.5 -1.875 -2.5c-.898 0 -1.125 .812 -1.125 1.429c0 1.83 2 2.058 2 3.571z"></path>
-//       <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-//    </svg>
-// );
-

@@ -1,12 +1,13 @@
 import { FC } from "react";
 import { ArrowRightUp } from "../icons";
 
+
 type Project = {
    title: string;
    url: string;
    resume: string;
    tecnologies?: string[];
-   image: string;
+   image: any;
    alt: string;
 };
 

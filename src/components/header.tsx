@@ -26,7 +26,7 @@ const Header = () => {
             >
                <div className="flex lg:flex-1 w-20 relative">
                   <a href="#" className="-m-1.5 p-1.5">
-                     <Logo />
+                     <Logo className="h-10"/>
                   </a>
                </div>
                <div className="flex lg:hidden">
@@ -142,7 +142,7 @@ const Header = () => {
                   <div className="flex items-center justify-between">
                      <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
-                        <Logo />
+                        <Logo className="h-8"/>
                      </a>
                      <button
                         type="button"
@@ -160,7 +160,7 @@ const Header = () => {
                               <Btn_menu
                                  key={id}
                                  title={e.title}
-                                 id={e.id}
+                                 id={`#${e.id}`}
                                  submenu={e.submenu}
                                  handleClick = {setMobileMenuOpen}
                               />

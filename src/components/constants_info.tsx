@@ -1,4 +1,12 @@
 import { Alura, Continental } from "./icons";
+// @ts-ignore
+import Tiendeo from "../assets/img/tiendeo.png?url";
+// @ts-ignore
+import Encriptador from "../assets/img/encriptador.png?url";
+// @ts-ignore
+import Ahorcado from "../assets/img/ahorcado.png?url";
+// @ts-ignore
+import Connect from "../assets/img/connect_4.png?url";
 
 export const TRAINING = [
    {
@@ -25,7 +33,7 @@ export const info_projects = [
       url: "https://voidzaid.github.io/sprint_one_encriptador/",
       resume:
          "Es un challenge del programa ONE, el programa consiste en insertar texto y que este lo devuelva encriptado, asi mismo en la misma pagina se desencripta",
-      image: "./src/assets/img/encriptador_texto.png",
+      image: Encriptador,
       alt: "encriptador Alura ONE",
    },
    {
@@ -33,7 +41,7 @@ export const info_projects = [
       url: "https://voidzaid.github.io/sprint_one_ahorcado/",
       resume:
          "El juego tambien es parte de los challenges del programa ONE, este consiste en desarrollar desde cero el juego del ahorcado dando oportunidades y posibilidad de escoger una palabra para el juego",
-      image: "./src/assets/img/ahorcado.png",
+      image: Ahorcado,
       alt: "ahorcado Alura ONE",
    },
    {
@@ -42,7 +50,7 @@ export const info_projects = [
       resume:
          "El juego tambien es parte de los challenges del programa ONE, este consiste en desarrollar desde cero el juego del ahorcado dando oportunidades y posibilidad de escoger una palabra para el juego",
       tecnologies: ["Css", "Atomic design", "BEM", "JavaScript"],
-      image: "./src/assets/img/tiendeo.png",
+      image: Tiendeo,
       alt: "ecommerce Tiendeo Alura ONE",
    },
    {
@@ -51,7 +59,7 @@ export const info_projects = [
       resume:
          "El juego tambien es parte de los challenges del programa ONE, este consiste en desarrollar desde cero el juego del ahorcado dando oportunidades y posibilidad de escoger una palabra para el juego",
       tecnologies: ["CSS", "JavaScript", "React"],
-      image: "./src/assets/img/connect_4.png",
+      image: Connect,
       alt: "juego del ahorcado React",
    },
 ];
