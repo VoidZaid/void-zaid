@@ -1,5 +1,5 @@
 .head2{
-   @apply font-bold text-slate-200 sticky top-10 backdrop-blur-md bg-[#06122480] py-4 z-20 w-screen -mx-6 px-6 
+   @apply font-bold text-slate-200 sticky top-12 backdrop-blur-md bg-[#06122480] py-2 z-20 -mx-4 px-6 w-screen 
    md:w-auto lg:static lg:backdrop-blur-0 sm:-mx-10 sm:px-10 lg:bg-transparent lg:hidden;
 }
 .card{
@@ -13,4 +13,33 @@
 }
 .active .effect_line{
    @apply bg-slate-200 w-16
+}
+.effectWriting{
+   display: block;
+   /* border-right: .25rem solid #26bfad; */
+   white-space: nowrap;
+   /* width: 5ch; */
+   animation: blink .5s infinite step-end alternate, typing 1.5s steps(5);
+   overflow: hidden;
+}
+@keyframes blink {
+   50%{
+      border-color: transparent;
+      /* border-color: #26bfad; */
+   }
+}
+@keyframes typing {
+   /* from {width: 0;}  */
+   0%{
+      width: 0;
+   }
+   30%{
+      width: 0;
+   }
+   100%{
+      width: 5ch;
+   }
+   /* 100%{
+      width: 0;
+   } */
 }

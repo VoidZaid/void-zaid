@@ -13,36 +13,35 @@ import Container from "./layout/container";
 // ICONS
 import { icons_media } from "./icons_media";
 import { Logos } from "./icons_skills";
-//IMG 
+//IMG
 // @ts-ignore
 import Perfil from "../assets/img/void_zaid.jfif?url";
 
-
 const Layout = () => {
    return (
-      <main className="relative lg:bg-cyan-900 ">
-         <BgCircle className="lg:z-0"/>
-         <BgColor className=""/>
-         <div className="max-w-screen-xl lg:flex lg:relative lg:w-full lg:mx-auto lg:justify-between">
-            <Section className="lg:z-10 lg:w-1/2 lg:sticky lg:top-0 lg:h-screen lg:pt-24">
+      <main className="lg:bg-cyan-900 lg:text-base max-w-screen font-openSans">
+         <BgCircle className="hidden lg:z-0  lg:block" classFather="hidden lg:block" />
+         <BgColor className="hidden lg:block" />
+         <div className="max-w-screen-xl lg:px-10 lg:flex lg:relative lg:w-full lg:mx-auto lg:justify-between xl:px-20">
+            <Section className="lg:z-10 lg:w-2/5 lg:sticky lg:top-0 lg:h-screen lg:pt-24 xl:w-1/2 ">
                <BgCircle className="lg:hidden" />
-               <BgColor className="lg:hidden"/>
+               <BgColor className="lg:hidden" />
                <Container
-                  className="h-customMobile pb-0
+                  className="h-customMobile pb-1
             sm:h-auto sm:py-8
             lg:w-full lg:pt-0 lg:h-full lg:pb-0"
                >
                   <div
                      className="flex flex-col items-center h-full
-               sm:h-auto lg:items-start lg:pl-8"
+               sm:h-auto lg:items-start  lg:gap-8"
                   >
                      <div
                         className="text-slate-200 
-                  sm:flex sm:flex-col sm:gap-4 md:gap-8 lg:gap-3"
+                  sm:flex sm:flex-col sm:gap-4 md:gap-2 lg:gap-3"
                      >
                         <h1
-                           className="text-4xl font-bold pt-8 pb-4
-                     sm:pb-0 lg:pt-0 lg:text-6xl"
+                           className="text-4xl font-bold font-openSans pt-8 pb-4
+                      lg:pt-0 lg:text-6xl"
                         >
                            Paúl Díaz
                         </h1>
@@ -69,30 +68,41 @@ const Layout = () => {
                      </div>
                      <picture
                         className="relative flex flex-col items-center justify-center gap-10 h-full pb-10  
-                  sm:gap-10 sm:pb-0 sm:h-auto sm:pt-8 lg:items-start lg:w-full"
+                  sm:gap-10 sm:pb-0 sm:h-auto sm:pt-8 lg:items-start lg:w-full lg:pt-0"
                      >
                         <img
-                           className="object-cover rounded-full w-3/4 lg:max-w-xs lg:w-2/4"
+                           className="object-cover rounded-full w-3/4 sm:max-w-xs lg:w-2/5 lg:max-w-xs"
                            src={Perfil}
                         />
-                        <div>
+                        <div className="flex relative items-center  bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-slate-400 mr-8 ml-4 
+                        sm:pb-8
+                        lg:hidden">
                            <span
-                              className="animate-glowing bg-clip-text text-transparent
-                  bg-gradient-to-r from-teal-800 to-teal-200
-                  mx-auto text-5xl font-bold
-                  sm:hidden"
+                              className="animate-glowing bg-clip-text  mx-auto text-2xl font-bold font-rubikMono tracking-[-4px] absolute -left-4 text-slate-600
+                              "
                            >
-                              {"<coder/>"}
+                              {"<"}
+                           </span>
+                           <figcaption
+                              className="text-3xl font-bold font-rubikMono
+                              effectWriting border-slate-400 border-r-4 leading-7 text-center
+                              "
+                           >
+                              {"coder"}
+                           </figcaption>
+                           <span
+                              className="animate-glowing  mx-auto text-2xl font-bold font-rubikMono tracking-[-4px] absolute -right-8 text-slate-400 z-20
+                              "
+                           >
+                              {"/>"}
                            </span>
                         </div>
                      </picture>
                      <nav className="hidden lg:block">
                         <ul className="">
-                        {
-                           info_menu.map((e,id)=>(
-                              <Btn_desktop key={id} title={e.title} id={e.id}/>
-                           ))
-                        }
+                           {info_menu.map((e, id) => (
+                              <Btn_desktop key={id} title={e.title} id={e.id} />
+                           ))}
                         </ul>
                      </nav>
                   </div>
@@ -102,9 +112,13 @@ const Layout = () => {
                         <li key={id}>
                            <a
                               href={e.url}
+                              target="blank"
                               className="text-sm font-semibold leading-6 text-gray-900"
                            >
-                              <e.icon className="stroke-teal-500" height="40" />
+                              <e.icon
+                                 className="stroke-teal-400 hover:stroke-teal-500"
+                                 height="40"
+                              />
                            </a>
                         </li>
                      ))}
@@ -113,15 +127,14 @@ const Layout = () => {
             </Section>
             {/* <div className="h-[1px] bg-red-200/10"></div> */}
             {/* ABOUT ME SECTION */}
-            <div className="lg:w-1/2">
-               <Section id="about_me" className="pt-16 sm:pt-10 lg:pt-24">
-                  <BgColor className="lg:hidden"/>
+            <div className="lg:w-3/5 xl:w-1/2">
+               <Section id="about_me" className="pt-8 sm:pt-10 lg:pt-24">
+                  <BgColor className="lg:hidden" />
                   <Container className="">
                      <div className="flex gap-2 flex-col relative">
                         <p>
-                           <span>Hola</span>, soy de Perú y tengo
-                           25 años. En el año 2021 surgió mi curiosidad por
-                           saber{" "}
+                           <span>Hola</span>, soy de Perú y tengo 25 años. En el
+                           año 2021 surgió mi curiosidad por saber{" "}
                            <i className="font-bold not-italic">
                               ¿que es la programacion?
                            </i>
@@ -151,8 +164,8 @@ const Layout = () => {
 
                {/* FORMACION */}
                <Section id="formation" className="">
-                  <BgCircle className="lg:hidden md:h-20"/>
-                  <BgColor  className="lg:hidden"/>
+                  <BgCircle className="lg:hidden md:h-20" />
+                  <BgColor className="lg:hidden" />
                   <Container className="gap-8">
                      <h2 className="head2">FORMACIÓN</h2>
                      {TRAINING.map((item, id) => (
@@ -170,7 +183,7 @@ const Layout = () => {
 
                {/* SKILLS */}
                <Section id="skills" className="w-full">
-                  <BgColor className="lg:hidden"/>
+                  <BgColor className="lg:hidden" />
                   <Container className="gap-10 md:w-full">
                      <h2 className="head2">SKILLS</h2>
                      <div
@@ -188,7 +201,7 @@ const Layout = () => {
                </Section>
                {/* PROJECTS */}
                <Section id="projects">
-                  <BgColor className="lg:hidden"/>
+                  <BgColor className="lg:hidden" />
                   <Container>
                      <h2 className="head2">PROYECTOS</h2>
                      {/* contenedor de los cards */}

@@ -60,11 +60,11 @@ const Linkedin: FC<Icon_media> = ({ className, height }) => (
 export const icons_media=[                        
    {
       icon : Linkedin,
-      url : "https://www.linkedin.com"
+      url : "https://www.linkedin.com/in/rene-paul-diaz/"
    },
    {
       icon : Github,
-      url : "https://www.github.com"
+      url : "https://github.com/VoidZaid"
    },
    {
       icon : Facebook,

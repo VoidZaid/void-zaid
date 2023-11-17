@@ -30,7 +30,7 @@ const FormationCard: FC<Formation> = ({
                   {profession}
                </h3>
                <Icon className="fill fill-slate-200 pb-4 mx-auto h-32 
-               sm:h-20 sm:py-1"/>
+               sm:h-20 sm:py-1 lg:py-4 lg:h-28"/>
                <p>{resume}</p>
             </div>
          </div>

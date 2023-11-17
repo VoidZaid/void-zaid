@@ -3,11 +3,13 @@ import { FC } from "react";
 import { Disclosure } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
+import { Link } from "react-scroll";
+
 type info = {
    title: string;
    id: string;
    submenu?: infoSubmenu[] | undefined;
-   handleClick: (value: boolean)=>void
+   handleClick: (value: boolean) => void;
 };
 type infoSubmenu = {
    name: string;
@@ -19,16 +21,21 @@ function classNames(...classes: any[]): string {
    return classes.filter(Boolean).join(" ");
 }
 
-const Btn_menu: FC<info> = ({ title, id, submenu , handleClick}) => {
+const Btn_menu: FC<info> = ({ title, id, submenu, handleClick }) => {
    return (
       <>
          {!submenu && (
-            <button
-               id={id}
-               className="flex w-full rounded-lg  text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-               onClick={()=>handleClick(false)}
-            >
-               <a href={id} className="w-full px-3 py-2">{title}</a>
+            <button className="flex w-full rounded-lg  text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+               <Link
+                  to={id}
+                  smooth={true}
+                  offset={-50}
+                  duration={300}
+                  className="w-full px-3 py-2"
+                  onClick={() => handleClick(false)}
+               >
+                  {title}
+               </Link>
             </button>
          )}
          {submenu && (

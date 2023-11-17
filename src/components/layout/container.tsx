@@ -8,8 +8,8 @@ type Container = {
 const Container: FC<Container> = ({ className, children }) => {
    return (
       <div
-         className={`max-w-5xl mx-auto z-10 pb-12 flex flex-col text-slate-400
-     lg:px-0 lg:w-full ${className}`}
+         className={`${className} max-w-5xl mx-auto z-10 pb-12 flex flex-col text-slate-400
+     lg:px-0 lg:w-full `}
       >
          {children}
       </div>
