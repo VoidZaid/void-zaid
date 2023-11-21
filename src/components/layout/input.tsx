@@ -6,7 +6,7 @@ interface input{
    classFather?:string
 }
 
-const Input:FC<input> = ({type, label, className, classFather}) => {
+const Input:FC<input> = ({type, label, className}) => {
    return (
       <div className={`relative ${className}`}>
          {

@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="bg-slate-100">
          <Section
             id="contact"
-            className="max-w-screen-xl px-16 py-10 sm:py-16 sm:px-28 md:px-28 bg-slate-100 lg:px-40 lg:py-36 lg:mx-auto"
+            className="max-w-screen-xl px-16 py-10 sm:py-16 sm:px-28 md:px-28 lg:bg-slate-100 lg:px-40 lg:py-36 lg:mx-auto"
          >
             <h2 className="font-bold text-slate-600 mx-auto mb-8 lg:text-2xl lg:mb-20">
                CONTÁCTAME
