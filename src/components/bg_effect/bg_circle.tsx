@@ -13,7 +13,7 @@ const bgCircle :FC<circle> = ({ className, classFather}) => {
             <div
                aria-hidden="true"
                className={`w-4/5 rotate-[135deg] h-48 m-auto blur-xl bg-radialGradient from-cyan-400 via-blue-600 to-purple-800 rounded-[50%] md:w-[30rem] md:h-[30rem] md:blur-3xl
-               sm:none lg:w-full lg:h-48 lg:rotate-45 lg:ml-96 lg:my-0 ${className}`}
+               lg:w-full lg:h-48 lg:rotate-45 lg:ml-96 lg:my-0 ${className}`}
             ></div>
          </div>
       </>

@@ -20,9 +20,9 @@ const CardProjects: FC<Project> = ({
    alt,
 }) => {
    return (
-      <div className="group">
+      <div className="group cursor-pointer">
          <div
-            className="group flex flex-col-reverse gap-6 border-spacing-3 p-3 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] 
+            className="group flex flex-col-reverse gap-6 border-spacing-3 p-3 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] transition-all ease-in duration-75
       sm:py-4 sm:flex-row sm:rounded sm:shadow-none sm:group-hover:bg-slate-800/50 sm:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]"
          >
             <figure className="sm:w-1/4">

@@ -18,12 +18,13 @@ import { Logos } from "./icons_skills";
 import Perfil from "../assets/img/void_zaid.jfif?url";
 
 const Layout = () => {
+
    return (
-      <main className="lg:bg-cyan-900 lg:text-base max-w-screen font-openSans">
-         <BgCircle className="hidden lg:z-0  lg:block" classFather="hidden lg:block" />
+      <main className="lg:relative lg:bg-cyan-900 lg:text-base lg:pb-16 font-openSans">
+         <BgCircle className="hidden lg:z-0 lg:block lg:ml-auto lg:w-2/3" classFather="hidden lg:block" />
          <BgColor className="hidden lg:block" />
          <div className="max-w-screen-xl lg:px-10 lg:flex lg:relative lg:w-full lg:mx-auto lg:justify-between xl:px-20">
-            <Section className="lg:z-10 lg:w-2/5 lg:sticky lg:top-0 lg:h-screen lg:pt-24 xl:w-1/2 ">
+            <Section className="lg:z-10 lg:w-2/5 lg:sticky lg:top-0 lg:h-screen lg:pt-14 xl:w-1/2 ">
                <BgCircle className="lg:hidden" />
                <BgColor className="lg:hidden" />
                <Container
@@ -33,15 +34,15 @@ const Layout = () => {
                >
                   <div
                      className="flex flex-col items-center h-full
-               sm:h-auto lg:items-start  lg:gap-8"
+               sm:h-auto lg:items-start  lg:gap-4 2xl:gap-12"
                   >
                      <div
                         className="text-slate-200 
-                  sm:flex sm:flex-col sm:gap-4 md:gap-2 lg:gap-3"
+                  sm:flex sm:flex-col sm:gap-4 md:gap-2 lg:gap-1"
                      >
                         <h1
                            className="text-4xl font-bold font-openSans pt-8 pb-4
-                      lg:pt-0 lg:text-6xl"
+                      lg:pt-0 lg:text-6xl lg:pb-2"
                         >
                            Paúl Díaz
                         </h1>
@@ -71,7 +72,7 @@ const Layout = () => {
                   sm:gap-10 sm:pb-0 sm:h-auto sm:pt-8 lg:items-start lg:w-full lg:pt-0"
                      >
                         <img
-                           className="object-cover rounded-full w-3/4 sm:max-w-xs lg:w-2/5 lg:max-w-xs"
+                           className="object-cover rounded-full w-3/4 sm:max-w-xs lg:w-1/4 lg:max-w-xs"
                            src={Perfil}
                         />
                         <div className="flex relative items-center  bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-slate-400 mr-8 ml-4 
@@ -128,7 +129,7 @@ const Layout = () => {
             {/* <div className="h-[1px] bg-red-200/10"></div> */}
             {/* ABOUT ME SECTION */}
             <div className="lg:w-3/5 xl:w-1/2">
-               <Section id="about_me" className="pt-8 sm:pt-10 lg:pt-24">
+               <Section id="about_me" className="pt-8 sm:pt-10 lg:pt-14">
                   <BgColor className="lg:hidden" />
                   <Container className="">
                      <div className="flex gap-2 flex-col relative">

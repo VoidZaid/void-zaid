@@ -18,7 +18,7 @@ const FormationCard: FC<Formation> = ({
       <div className="group">
          <div
             className=" flex flex-col border-spacing-3 p-3 rounded bg-slate-800/50 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
-            sm:flex-row sm:bg-inherit sm:shadow-none sm:gap-6
+            sm:flex-row sm:bg-inherit sm:shadow-none sm:gap-6 transition-all ease-in duration-75
                   sm:group-hover:bg-slate-800/50 sm:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
                   "
          >

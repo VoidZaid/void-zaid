@@ -38,7 +38,7 @@ const Btn_desktop: FC<Btn_desktop> = ({ title, id }) => {
             activeClass="active"
             spy={true}
             smooth={true}
-            offset={-80}
+            offset={-20}
             duration={750}
             className="flex items-center px-3 py-2 text-xs hover:text-slate-200 lg:uppercase cursor-pointer"
          >
