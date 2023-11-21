@@ -19,7 +19,7 @@
    /* border-right: .25rem solid #26bfad; */
    white-space: nowrap;
    /* width: 5ch; */
-   animation: blink .5s infinite step-end alternate, typing 1.5s steps(5);
+   animation: blink .5s infinite step-end alternate, typing 1.8s steps(5);
    overflow: hidden;
 }
 @keyframes blink {
@@ -33,7 +33,7 @@
    0%{
       width: 0;
    }
-   30%{
+   40%{
       width: 0;
    }
    100%{
