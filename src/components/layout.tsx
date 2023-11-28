@@ -15,7 +15,7 @@ import { icons_media } from "./icons_media";
 import { Logos } from "./icons_skills";
 //IMG
 // @ts-ignore
-import Perfil from "../assets/img/void_zaid.jfif?url";
+import Perfil from "../assets/img/void_zaid.png?url";
 
 const Layout = () => {
 

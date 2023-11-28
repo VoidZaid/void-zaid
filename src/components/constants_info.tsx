@@ -7,6 +7,8 @@ import Encriptador from "../assets/img/encriptador.png?url";
 import Ahorcado from "../assets/img/ahorcado.png?url";
 // @ts-ignore
 import Connect from "../assets/img/connect_4.png?url";
+// @ts-ignore
+import Conversor from "../assets/img/conversor.png?url"
 
 export const TRAINING = [
    {
@@ -52,6 +54,15 @@ export const info_projects = [
       tecnologies: ["Css", "Atomic design", "BEM", "JavaScript"],
       image: Tiendeo,
       alt: "ecommerce Tiendeo Alura ONE",
+   },
+   {
+      title: "Conversor de monedas",
+      url: "https://github.com/VoidZaid/conversorMonedasJava",
+      resume:
+         "Con este proyecto pude conectarme a una api para tener los tipos de cambio actualziados y consumir datos de ella para hacer hacer calculos de distintas monedas a la moneda peruana, y además tambien tiene una calculadora de IMC donde ingresando nuestro peso y talla podemos obtener dicho valor.",
+      tecnologies: ["Java", "JSON","okHttp3"],
+      image: Conversor,
+      alt: "conversor de monedas en Java",
    },
    {
       title: "Connect-4",

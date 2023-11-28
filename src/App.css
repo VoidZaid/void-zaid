@@ -45,18 +45,27 @@
 }
 
 /* EFECT GOOGLE PLACEHOLDERSHOWN */
+.input{
+   @apply rounded-sm w-full py-1 px-2 py-1 outline-none border-slate-300 bg-slate-100 border-2 outline-offset-2 focus:border-teal-400 transition-all ease-linear duration-150
+
+}
 .label{
    position: absolute;
    top: 0.25rem;
    left: 0.7rem;
-   transition: transform .5s, color 1s;
+   transition: transform .2s, color .2s;
+   @apply text-slate-400
 }
 .input:not(:placeholder-shown){
-   color: rgb(71, 85, 105)
+   color: rgb(71, 85, 105);
 }
 .input:not(:placeholder-shown) + .label{
-   transform: translateY(-22px) scale(0.8);
+   transform: translateY(-13px) scale(0.8);
    transform-origin: left top;
    color: teal;
    font-weight: 700;
+   @apply bg-slate-100 px-1
+}
+.span{
+   @apply font-thin text-red-700 text-xs absolute bottom-0 lg:bottom-[6px] left-0
 }

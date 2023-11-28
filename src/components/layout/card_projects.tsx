@@ -32,6 +32,7 @@ const CardProjects: FC<Project> = ({
                "
                   src={image}
                   alt={alt}
+                  loading="lazy"
                />
             </figure>
             <div className="sm:w-3/4">
