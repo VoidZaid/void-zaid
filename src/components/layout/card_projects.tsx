@@ -21,7 +21,7 @@ const CardProjects: FC<Project> = ({
    const anchor = useRef<HTMLAnchorElement>(null);
 
    const handleClick = () => {
-      // console.log(anchor.current)
+      console.log(anchor.current)
       anchor.current?.click();
    };
    return (
