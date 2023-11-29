@@ -1,6 +1,5 @@
-import { FC } from "react";
+import { AnchorHTMLAttributes, FC, useRef } from "react";
 import { ArrowRightUp } from "../icons";
-
 
 type Project = {
    title: string;
@@ -19,8 +18,14 @@ const CardProjects: FC<Project> = ({
    image,
    alt,
 }) => {
+   const anchor = useRef<HTMLAnchorElement>(null);
+
+   const handleClick = () => {
+      // console.log(anchor.current)
+      anchor.current?.click();
+   };
    return (
-      <div className="group cursor-pointer">
+      <div className="group cursor-pointer" onClick={handleClick}>
          <div
             className="group flex flex-col-reverse gap-6 border-spacing-3 p-3 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] transition-all ease-in duration-75
       sm:py-4 sm:flex-row sm:rounded sm:shadow-none sm:group-hover:bg-slate-800/50 sm:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]"
@@ -40,7 +45,7 @@ const CardProjects: FC<Project> = ({
                   className="font-bold text-slate-200 
                         hover:text-teal-400"
                >
-                  <a className="flex" href={url} target="blank">
+                  <a ref={anchor} className="flex" href={url} target="_blank">
                      {title}
                      <ArrowRightUp />
                   </a>
