@@ -2,6 +2,9 @@
    @apply font-bold text-slate-200 sticky top-12 backdrop-blur-md bg-[#06122480] py-2 z-20 -mx-4 px-6 w-screen 
    sm:-mx-20 sm:px-20 md:w-auto lg:static lg:backdrop-blur-0 lg:bg-transparent lg:hidden;
 }
+.head1{
+   @apply text-4xl font-bold font-openSans
+}
 .card{
    @apply flex flex-col-reverse gap-6 border-spacing-3 p-3 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:rounded lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
 }
@@ -46,12 +49,12 @@
 
 /* EFECT GOOGLE PLACEHOLDERSHOWN */
 .input{
-   @apply rounded-sm w-full py-1 px-2 py-1 outline-none border-slate-300 bg-slate-100 border-2 outline-offset-2 focus:border-teal-400 transition-all ease-linear duration-150
+   @apply rounded-sm w-full px-2 py-2 outline-none border-slate-500 bg-slate-100 border-2 outline-offset-2 focus:border-teal-600 transition-all ease-linear duration-150
 
 }
 .label{
    position: absolute;
-   top: 0.25rem;
+   top: 0.6rem;
    left: 0.7rem;
    transition: transform .2s, color .2s;
    @apply text-slate-400
@@ -60,7 +63,7 @@
    color: rgb(71, 85, 105);
 }
 .input:not(:placeholder-shown) + .label{
-   transform: translateY(-13px) scale(0.8);
+   transform: translateY(-18px) scale(0.8);
    transform-origin: left top;
    color: teal;
    font-weight: 700;

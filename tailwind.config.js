@@ -10,7 +10,11 @@ export default {
          },
          height:{
             customMobile: 'calc(100vh - 48px)',
-            customDesktop: 'calc(100vh - 48px)',
+            customDesktop: 'calc(100vh)',
+         },
+         minHeight:{
+            minCustomMobile: 'calc(100vh - 48px)',
+            minCustomDesktop: 'calc(100vh)',
          },
          keyframes:{
             glowing:{

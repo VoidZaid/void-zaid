@@ -142,7 +142,7 @@ const Header = () => {
                <div className="flex items-center justify-between">
                   <a href="#" className="-m-1.5 p-1.5">
                      <span className="sr-only">Your Company</span>
-                     <Logo className="h-8" />
+                     <Logo className="h-10" />
                   </a>
                   <button
                      type="button"

@@ -20,7 +20,7 @@ const Facebook: FC<Icon_media> = ({ className, height }) => (
    </svg>
 );
 
-const Github: FC<Icon_media> = ({ className, height }) => (
+export const Github: FC<Icon_media> = ({ className, height }) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -37,7 +37,7 @@ const Github: FC<Icon_media> = ({ className, height }) => (
    </svg>
 );
 
-const Linkedin: FC<Icon_media> = ({ className, height }) => (
+export const Linkedin: FC<Icon_media> = ({ className, height }) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}

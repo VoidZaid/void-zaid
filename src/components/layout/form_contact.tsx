@@ -17,12 +17,12 @@ const FormContact = ({ className }: { className: string }) => {
    const onSubmit = (data:formData) => {
       console.log(data);
    };
-   console.log(errors);
-   console.log(errors.email?.type);
+   // console.log(errors);
+   // console.log(errors.email?.type);
    return (
       <form action="" className={`${className}`} onSubmit={handleSubmit(onSubmit)}>
          <fieldset className="w-full">
-            <div className={`relative pb-4 md:pb-5 w-full mb-3 lg:mb-1`}>
+            <div className={`relative pb-4 mb-2 md:pb-5 w-full  lg:mb-1`}>
                <input
                   type="text"
                   id="name"
@@ -50,7 +50,7 @@ const FormContact = ({ className }: { className: string }) => {
                   Nombres
                </label>
             </div>
-            <div className={`relative pb-4 md:pb-5 mb-3 lg:mb-1`}>
+            <div className={`relative pb-4 mb-0 md:pb-5 lg:mb-1`}>
                <input
                   type="text"
                   id="email"
@@ -64,7 +64,7 @@ const FormContact = ({ className }: { className: string }) => {
                      pattern: {
                         value: /^[a-zA-Z0-9._%+-]{2,30}@[a-z0-9.-]+\.[a-z]{2,4}$/,
                         message:
-                           "este campo debe cumplir con el siguiente patron: correo@correo.com",
+                           "usar el patron: correo@correo.com",
                      },
                   })}
                />
@@ -77,11 +77,11 @@ const FormContact = ({ className }: { className: string }) => {
             </div>
          </fieldset>
          <fieldset className="">
-            <div className="relative pb-4 md:pb-5">
+            <div className="relative pb-2 md:pb-2">
                <textarea
                   id="message"
                   placeholder=" "
-                  className="pb-2 md:h-full md:pb-0 input resize-none"
+                  className="pb-2 h-32 md:h-full md:pb-0 input resize-none"
                   {...register("message", {
                      required: {
                         value: true,
@@ -108,7 +108,7 @@ const FormContact = ({ className }: { className: string }) => {
          <input
             type="submit"
             value="Enviar mensaje"
-            className="bg-teal-500/50 px-3 py-1 rounded-lg text-teal-700 font-bold cursor-pointer hover:bg-teal-500 hover:text-teal-900 transition-all ease-in-out duration-300 md:mt-4"
+            className="bg-teal-500/50 w-full px-3 py-1 rounded-lg text-teal-700 font-bold cursor-pointer hover:bg-teal-500 hover:text-teal-900 transition-all ease-in-out duration-300 md:mt-0"
          />
       </form>
    );

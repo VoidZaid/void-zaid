@@ -59,7 +59,7 @@ export const info_projects = [
       title: "Conversor de monedas",
       url: "https://github.com/VoidZaid/conversorMonedasJava",
       resume:
-         "Con este proyecto pude conectarme a una api para tener los tipos de cambio actualziados y consumir datos de ella para hacer hacer calculos de distintas monedas a la moneda peruana, y además tambien tiene una calculadora de IMC donde ingresando nuestro peso y talla podemos obtener dicho valor.",
+         "Con este proyecto pude conectarme a una api para tener los tipos de cambio actualizados y consumir datos de ella para hacer hacer calculos de distintas monedas a la moneda peruana, y además tambien tiene una calculadora de IMC donde ingresando nuestro peso y talla podemos obtener dicho valor.",
       tecnologies: ["Java", "JSON","okHttp3"],
       image: Conversor,
       alt: "conversor de monedas en Java",

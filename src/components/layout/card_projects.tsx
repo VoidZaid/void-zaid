@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, FC, useRef } from "react";
+import {  FC, useRef } from "react";
 import { ArrowRightUp } from "../icons";
 
 type Project = {
