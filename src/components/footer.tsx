@@ -76,7 +76,6 @@ const Footer = () => {
                         >
                            <Linkedin
                               className="stroke-teal-500 h-10 inline pr-2"
-                              height="10"
                            />
                            Linkedin
                         </a>
@@ -85,7 +84,6 @@ const Footer = () => {
                         <a href="https://github.com/VoidZaid" target="_blank">
                            <Github
                               className="stroke-teal-500 h-10 inline pr-2"
-                              height=""
                            />
                            Github
                         </a>
