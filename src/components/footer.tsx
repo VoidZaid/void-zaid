@@ -1,6 +1,5 @@
 import { Whatsapp, Mail, Address } from "./icons";
 import { Github, Linkedin } from "./icons_media";
-import { Link } from "react-scroll";
 import Section from "./layout/section";
 import FormContact from "./layout/form_contact";
 import { useNavigate } from "react-router-dom";
