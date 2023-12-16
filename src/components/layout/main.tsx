@@ -62,8 +62,7 @@ const Main = () => {
                                        className="text-sm font-semibold leading-6 text-gray-900"
                                     >
                                        <e.icon
-                                          className="stroke-teal-500"
-                                          height="40"
+                                          className="stroke-teal-500 h-10"
                                        />
                                     </a>
                                  </li>
@@ -108,7 +107,7 @@ const Main = () => {
                         <div className="md:pt-0 lg:hidden">
                            <button className="rounded-full animate-bounce border-4 border-teal-400  px-4 py-1 font-bold text-slate-100 text-lg shadow-lg shadow-cyan-900 hover:border-teal-800">
                               <a
-                                 href="./public/pdf/2312_cv-progr_en_sim.pdf"
+                                 href=""
                                  download
                               >
                                  Descargar CV
@@ -128,8 +127,8 @@ const Main = () => {
                         </nav>
                      </div>
                      {/* button cv LG */}
-                     <div className="md:pt-0">
-                        <button className="rounded-full animate-bounce border-4 border-teal-400  border-solid px-4 py-1 font-bold text-slate-100 text-sm shadow-lg shadow-cyan-900 hover:border-teal-500 hover:text-slate-400">
+                     <div className="md:pt-0 hidden lg:block">
+                        <button className=" rounded-full animate-bounce border-4 border-teal-400  border-solid px-4 py-1 font-bold text-slate-100 text-sm shadow-lg shadow-cyan-900 hover:border-teal-500 hover:text-slate-400">
                            <a
                               href="./public/pdf/2312_cv-progr_en_sim.pdf"
                               download
@@ -148,8 +147,7 @@ const Main = () => {
                                  className="text-sm font-semibold leading-6 text-gray-900"
                               >
                                  <e.icon
-                                    className="stroke-teal-400 hover:stroke-teal-500"
-                                    height="40"
+                                    className="stroke-teal-400 hover:stroke-teal-500 h-10"
                                  />
                               </a>
                            </li>

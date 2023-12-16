@@ -112,7 +112,6 @@ export const Logo = ({ className }: Icon) => (
    >
       <g
          transform="translate(0.000000,536.000000) scale(0.100000,-0.100000)"
-         height="500"
       >
          <path
             d="M450 5272 c0 -4 17 -28 38 -53 20 -25 48 -60 62 -78 14 -18 39 -50

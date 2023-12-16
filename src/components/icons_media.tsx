@@ -2,13 +2,11 @@ import {FC} from 'react';
 
 type Icon_media ={
    className:string,
-   height:string
 }
-const Facebook: FC<Icon_media> = ({ className, height }) => (
+const Facebook: FC<Icon_media> = ({ className }) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      height={height}
       viewBox="0 0 24 24"
       strokeWidth="2"
       fill="none"
@@ -20,11 +18,10 @@ const Facebook: FC<Icon_media> = ({ className, height }) => (
    </svg>
 );
 
-export const Github: FC<Icon_media> = ({ className, height }) => (
+export const Github: FC<Icon_media> = ({ className }) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      height={height}
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
@@ -37,11 +34,10 @@ export const Github: FC<Icon_media> = ({ className, height }) => (
    </svg>
 );
 
-export const Linkedin: FC<Icon_media> = ({ className, height }) => (
+export const Linkedin: FC<Icon_media> = ({ className }) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      height={height}
       viewBox="0 0 24 24"
       strokeWidth="2"
       fill="none"
