@@ -5,11 +5,11 @@ import Main from "./components/layout/main";
 import Privacity from "./components/layout/privacity";
 import Terms from "./components/layout/useTemrs";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { Routes, Route, HashRouter } from "react-router-dom";
+// BrowserRouter
 function App() {
    return (
-      <BrowserRouter>
+      <HashRouter>
          <Routes>
             <Route path="/" element={<Layout/>}>
                <Route index element={<Main/>}/>
@@ -17,7 +17,7 @@ function App() {
                <Route path="politica-privacidad" element={<Privacity/>}/>
             </Route>
          </Routes>
-      </BrowserRouter>
+      </HashRouter>
    );
 }
 
