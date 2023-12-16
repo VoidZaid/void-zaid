@@ -222,8 +222,7 @@ const Header = () => {
                               key={id}
                            >
                               <e.icon
-                                 className="fill-slate-40 stroke-teal-500"
-                                 height="40"
+                                 className="fill-slate-40 stroke-teal-500 h-20"
                               />
                            </a>
                         ))}

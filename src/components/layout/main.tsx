@@ -29,7 +29,7 @@ const Main = () => {
                   <BgCircle className="lg:hidden" />
                   <BgColor className="lg:hidden" />
                   <Container
-                     className="h-customMobile pb-0
+                     className="h-customMobile pb-1
             sm:h-auto sm:py-8
             lg:w-full lg:pt-0 lg:h-full lg:pb-0 lg:gap-8"
                   >
@@ -54,7 +54,7 @@ const Main = () => {
                               Hola, mi nombre es Paúl Díaz y construyo páginas y
                               aplicaciones web
                            </p>
-                           <ul className="gap-6 pb-6 hidden sm:hidden">
+                           <ul className="gap-6 pb-4 hidden sm:hidden">
                               {icons_media.map((e, id) => (
                                  <li key={id}>
                                     <a
