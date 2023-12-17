@@ -4,8 +4,8 @@ import Container from "./container";
 import BgColor from "../bg_effect/bg_color";
 import BgCircle from "../bg_effect/bg_circle";
 
-// import { Link } from "react-router-dom";
-// import { ArrowLeft } from "../icons";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "../icons";
 const Terms = () => {
    return (
       <Section className="md:justify-center md:min-h-minCustomMobile">
@@ -72,11 +72,11 @@ const Terms = () => {
                   </p>
                </div>
             </div>
-            {/* <div className="absolute -left-20 top-4 animate-pulse">
+            <div className="absolute -left-20 top-4 animate-pulse">
                <Link to={"/"}>
-                  <ArrowLeft className="w-16 fill-teal-500 stroke-teal-500 hover:stroke-teal-300" />
+                  <ArrowLeft className="h-16 fill-teal-500 stroke-teal-500 hover:stroke-teal-300" />
                </Link>
-            </div> */}
+            </div>
          </Container>
       </Section>
    );

@@ -2,11 +2,9 @@ import { Whatsapp, Mail, Address } from "./icons";
 import { Github, Linkedin } from "./icons_media";
 import Section from "./layout/section";
 import FormContact from "./layout/form_contact";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-   const navigate = useNavigate();
-
    return (
       <footer className="bg-slate-100 text-slate-700 sm:text-lg">
          <Section
@@ -74,17 +72,13 @@ const Footer = () => {
                            href="https://www.linkedin.com/in/rene-paul-diaz/"
                            target="_blank"
                         >
-                           <Linkedin
-                              className="stroke-teal-500 h-10 inline pr-2"
-                           />
+                           <Linkedin className="stroke-teal-500 h-10 inline pr-2" />
                            Linkedin
                         </a>
                      </li>
                      <li>
                         <a href="https://github.com/VoidZaid" target="_blank">
-                           <Github
-                              className="stroke-teal-500 h-10 inline pr-2"
-                           />
+                           <Github className="stroke-teal-500 h-10 inline pr-2" />
                            Github
                         </a>
                      </li>
@@ -109,25 +103,18 @@ const Footer = () => {
                   className="flex flex-col gap-6 items-center justify-around
             lg:flex-row"
                >
-                  <span className="flex justify-between text-white">
-                     <a
-                        href="#"
-                        className="font-semibold"
-                        onClick={() => navigate("/terminos-de-uso")}
-                     >
-                        Terminos de uso{" "}
-                     </a>
-                  </span>
-                  <span className="flex justify-between text-white">
-                     <a
-                        href="#"
-                        className="font-semibold"
-                        onClick={() => navigate("/politica-privacidad")}
-                     >
-                        {" "}
-                        Política de privacidad
-                     </a>
-                  </span>
+                  <Link
+                     to="./terminos-de-uso"
+                     className="flex justify-between text-white font-semibold"
+                  >
+                     Terminos de uso
+                  </Link>
+                  <Link
+                     to="./politica-privacidad"
+                     className="font-semibold flex justify-between text-white"
+                  >
+                     Política de privacidad
+                  </Link>
                </div>
             </div>
          </section>

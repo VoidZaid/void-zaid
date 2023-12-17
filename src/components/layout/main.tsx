@@ -107,7 +107,7 @@ const Main = () => {
                         <div className="md:pt-0 lg:hidden">
                            <button className="rounded-full animate-bounce border-4 border-teal-400  px-4 py-1 font-bold text-slate-100 text-lg shadow-lg shadow-cyan-900 hover:border-teal-800">
                               <a
-                                 href=""
+                                 href="./public/pdf/2312_cv-progr_en_sim.pdf"
                                  download
                               >
                                  Descargar CV
