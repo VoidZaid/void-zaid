@@ -4,6 +4,6 @@ import svgLoader from 'vite-svg-loader';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), svgLoader()],
-  base: "https://voidzaid.github.io/void-zaid/",
+  base: "./",
 })
 
