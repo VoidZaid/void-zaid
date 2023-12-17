@@ -102,6 +102,7 @@ l22 -70 0 -865 0 -865 -23 -80 c-36 -123 -94 -207 -196 -282 -162 -120 -367
    </svg>
 );
 
+
 export const Logo = ({ className }: Icon) => (
    <svg
       version="1.0"
@@ -179,7 +180,8 @@ m3496 -2294 c-9 -13 -28 -41 -43 -63 -35 -54 -127 -177 -186 -250 -69 -86 -69
 export const Phone = ({ className }: Icon) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={` ${className}`}
+      className={className}
+      height="0"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
@@ -195,7 +197,8 @@ export const Phone = ({ className }: Icon) => (
 export const Whatsapp = ({ className }: Icon) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={`${className}`}
+      className={className}
+      height="0"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
@@ -212,7 +215,8 @@ export const Whatsapp = ({ className }: Icon) => (
 export const Address = ({ className }: Icon) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={`${className}`}
+      className={className}
+      height="0"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
@@ -229,7 +233,8 @@ export const Address = ({ className }: Icon) => (
 export const Mail = ({ className }: Icon) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={`${className}`}
+      className={className}
+      height="0"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
@@ -246,7 +251,8 @@ export const Mail = ({ className }: Icon) => (
 export const ArrowLeft = ({ className }: Icon) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={`${className}`}
+      className={className}
+      height="0"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
@@ -260,3 +266,5 @@ export const ArrowLeft = ({ className }: Icon) => (
       <path d="M5 12l4 -4" />
    </svg>
 );
+
+
