@@ -3,7 +3,7 @@ import {FC} from 'react';
 type Icon_media ={
    className:string,
 }
-const Facebook: FC<Icon_media> = ({ className }) => (
+export const Facebook: FC<Icon_media> = ({ className }) => (
    <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
