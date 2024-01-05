@@ -107,7 +107,7 @@ const Main = () => {
                         <div className="md:pt-0 lg:hidden">
                            <button className="rounded-full animate-bounce border-4 border-teal-400  px-4 py-1 font-bold text-slate-100 text-lg shadow-lg shadow-cyan-900 hover:border-teal-800">
                               <a
-                                 href="./public/pdf/2312_cv-progr_en_sim.pdf"
+                                 href="public/pdf/2312_cv-progr_en_sim.pdf"
                                  download
                               >
                                  Descargar CV
@@ -138,7 +138,7 @@ const Main = () => {
                         </button>
                      </div>
                      {/* SOCIAL MEDIA ICONS */}
-                     <ul className="flex gap-6 justify-center pb-6 mt-auto sm:pb-0 md:mt-auto lg:justify-start">
+                     <ul className="flex gap-6 justify-center mt-auto sm:pb-0 md:mt-auto lg:justify-start">
                         {icons_media.map((e, id) => (
                            <li key={id}>
                               <a

@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 // import { Transition } from "@headlessui/react";
 // import { Popover } from "@headlessui/react";
-import { Dialog } from "@headlessui/react";
+import { Dialog, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 // import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Btn_menu from "./btn_responsive_menu";
@@ -20,12 +20,12 @@ const Header = () => {
    return (
       <header className="bg-white backdrop-blur-sm sticky top-0 z-20 lg:hidden ">
          <nav
-            className="mx-auto flex max-w-7xl items-center justify-between h-12 lg:px-8 px-4"
+            className="mx-auto flex max-w-7xl items-center justify-between h-12 md:h-16 lg:px-8 px-4"
             aria-label="Global"
          >
             <div className="flex lg:flex-1 w-20 relative">
                <a href="#" className="-m-1.5 p-1.5">
-                  <Logo className="h-10" />
+                  <Logo className="h-10 md:h-14" />
                </a>
             </div>
             <div className="flex lg:hidden">
@@ -35,7 +35,7 @@ const Header = () => {
                   onClick={() => setMobileMenuOpen(true)}
                >
                   <span className="sr-only">Open main menu</span>
-                  <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                  <Bars3Icon className="h-6 md:h-10 md:w-10 w-6" aria-hidden="true" />
                </button>
             </div>
 
@@ -129,60 +129,79 @@ const Header = () => {
          </nav>
 
          {/* MENU RESPONSIVE */}
-         <Dialog
-            as="div"
-            className="lg:hidden"
-            open={mobileMenuOpen}
-            onClose={setMobileMenuOpen}
-         >
-            <div className="fixed inset-0 z-10 " />
-            {/* THIS IS THE MENU / HERE WE CAN ADD STYLES */}
-            <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10
-            transition-all duration-500 ease-out">
-               <div className="flex items-center justify-between">
-                  <a href="#" className="-m-1.5 p-1.5">
-                     <span className="sr-only">Your Company</span>
-                     <Logo className="h-10" />
-                  </a>
-                  <button
-                     type="button"
-                     className="-m-2.5 rounded-md p-2.5 text-gray-700"
-                     onClick={() => setMobileMenuOpen(false)}
+         <Transition appear show={mobileMenuOpen} as={Fragment}>
+            <Dialog
+               as="div"
+               className="lg:hidden "
+               onClose={setMobileMenuOpen}
+            >
+               <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-200"
+                  enterFrom="opacity-0 -translate-x-8"
+                  enterTo="opacity-100 translate-x-0"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100 translate-x-0"
+                  leaveTo="opacity-0 -translate-x-8"
+               >
+                  {/* THIS IS THE MENU / HERE WE CAN ADD STYLES */}
+                  <Dialog.Panel
+                     className="fixed inset-y-0 right-0 z-20 w-full h-full overflow-y-scroll bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10
+            transition-all duration-500 ease-out"
                   >
-                     <span className="sr-only">Close menu</span>
-                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                  </button>
-               </div>
-               <div className="mt-6 flow-root">
-                  <div className="-my-6 divide-y divide-gray-500/10">
-                     <div className="space-y-2 py-6">
-                        {info_menu.map((e, id) => (
-                           <Btn_menu
-                              key={id}
-                              title={e.title}
-                              id={e.id}
-                              submenu={e.submenu}
-                              handleClick={setMobileMenuOpen}
-                           />
-                        ))}
-                        {/* <button className="-mx-3 w-full rounded-lg px-3 py-2 text-zbase font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                              <a href="#about_me">Sobre mi</a>
-                           </button>
-                           <button className="-mx-3 w-full rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                              <a href="#formation">Formación</a>
-                           </button>
-                           <button className="-mx-3 w-full rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                              <a href="#skills">Skills</a>
-                           </button>
-                           <button className="-mx-3 w-full rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                              <a href="#projects">Projects</a>
-                           </button>
-                           <button className="-mx-3 w-full rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                              <a href="#contact">Contacto</a>
-                           </button> */}
+                     <div className="flex items-center justify-between">
+                        <a href="#" className="-m-1.5 p-1.5">
+                           <span className="sr-only">Your Company</span>
+                           <Logo className="h-10 md:h-16" />
+                        </a>
+                        <button
+                           type="button"
+                           className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                           onClick={() => setMobileMenuOpen(false)}
+                        >
+                           <span className="sr-only">Close menu</span>
+                           <XMarkIcon className="h-6 md:w-10 md:h-10 w-6" aria-hidden="true" />
+                        </button>
+                     </div>
+                        <div className="divide-y divide-gray-500/10">
+                           <div className="flex flex-col gap-2 mt-10 md:mt-32">
+                              {info_menu.map((e, id) => (
+                                 <Btn_menu
+                                    key={id}
+                                    title={e.title}
+                                    id={e.id}
+                                    submenu={e.submenu}
+                                    handleClick={setMobileMenuOpen}
+                                 />
+                              ))}
+                             
+                           </div>
+                           {/* RESPONSIVE MENU SOCIAL MEDIA ICONS */}
+                           <div className="flex justify-center gap-6 h-[300px] md:h-[500px]">
+                              {icons_media.map((e, id) => (
+                                 <a
+                                    href={e.url}
+                                    target="blank"
+                                    className="text-sm font-semibold leading-6 text-gray-900 mt-auto"
+                                    key={id}
+                                 >
+                                    <e.icon className="fill-slate-40 stroke-teal-500 h-12 md:h-16" />
+                                 </a>
+                              ))}
+                           </div>
+                        </div>
+                  </Dialog.Panel>
+               </Transition.Child>
+            </Dialog>
+         </Transition>
+      </header>
+   );
+};
 
-                        {/* DROPDOWN MENU */}
-                        {/* <Disclosure as="div" className="-mx-3">
+export default Header;
+
+ {/* DROPDOWN MENU */}
+                              {/* <Disclosure as="div" className="-mx-3">
                               {({ open }) => (
                                  <>
                                     <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
@@ -210,29 +229,3 @@ const Header = () => {
                                  </>
                               )}
                            </Disclosure> */}
-                     </div>
-
-                     {/* RESPONSIVE MENU SOCIAL MEDIA ICONS */}
-                     <div className="pt-28 flex justify-center align-bottom gap-6">
-                        {icons_media.map((e, id) => (
-                           <a
-                              href={e.url}
-                              target="blank"
-                              className="text-sm font-semibold leading-6 text-gray-900"
-                              key={id}
-                           >
-                              <e.icon
-                                 className="fill-slate-40 stroke-teal-500 h-20"
-                              />
-                           </a>
-                        ))}
-                     </div>
-                  </div>
-               </div>
-            </Dialog.Panel>
-         </Dialog>
-      </header>
-   );
-};
-
-export default Header;

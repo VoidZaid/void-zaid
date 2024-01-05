@@ -25,7 +25,7 @@ const Btn_menu: FC<info> = ({ title, id, submenu, handleClick }) => {
    return (
       <>
          {!submenu && (
-            <button className="flex w-full rounded-lg  text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+            <button className="flex w-full rounded-lg  text-xl md:text-2xl font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                <Link
                   to={id}
                   smooth={true}
