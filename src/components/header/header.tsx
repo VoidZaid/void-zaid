@@ -4,11 +4,11 @@ import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 // import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import Btn_menu from "./btn_responsive_menu";
+import Btn_menu from "../btn_responsive_menu";
 
-import { Logo } from "./icons";
-import { icons_media } from "./icons_media";
-import { info_menu } from "./constants_info";
+import { Logo } from "../../constants/icons/icons";
+import { icons_media } from "../../constants/icons/media_icons";
+import { info_menu } from "../../constants/info/constants_info";
 
 // function classNames(...classes: any[]): string {
 //    return classes.filter(Boolean).join(" ");

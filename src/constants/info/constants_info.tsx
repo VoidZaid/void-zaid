@@ -1,14 +1,16 @@
-import { Alura, Continental } from "./icons";
+import { Alura, Continental } from "../icons/icons";
 // @ts-ignore
-import Tiendeo from "../assets/img/tiendeo.png?url";
+import Tiendeo from "../../assets/img/tiendeo.png?url";
 // @ts-ignore
-import Encriptador from "../assets/img/encriptador.png?url";
+import Encriptador from "../../assets/img/encriptador.png?url";
 // @ts-ignore
-import Ahorcado from "../assets/img/ahorcado.png?url";
+import Ahorcado from "../../assets/img/ahorcado.png?url";
 // @ts-ignore
-import Connect from "../assets/img/connect_4.png?url";
+import Connect from "../../assets/img/connect_4.png?url";
 // @ts-ignore
-import Conversor from "../assets/img/conversor.png?url"
+import Conversor from "../../assets/img/conversor.png?url"
+// @ts-ignore
+import Estore from "../../assets/img/e-store.png?url"
 
 export const TRAINING = [
    {
@@ -72,6 +74,15 @@ export const info_projects = [
       tecnologies: ["CSS", "JavaScript", "React"],
       image: Connect,
       alt: "juego del ahorcado React",
+   },
+   {
+      title: "E-Store",
+      url: "https://voidzaid.github.io/e-store/",
+      resume:
+         "Proyecto con el cual aprendí React de forma un poco mas profunda, primero use React-router para manejar mis rutas y en mi componente de Layout puse varias paginas como lo son de productos, productos filtrados por categorias, buscador de productos, visualizacion de los productos detallados, agregar aproductos al carrito de compas, formulario de compra y  persistencia de datos con LocalStorage.",
+      tecnologies: ["Sass", "React-Modules", "React-Reducer","React-Context","React-Router", "Fetch"],
+      image: Estore,
+      alt: "ecommerce con react",
    },
 ];
 

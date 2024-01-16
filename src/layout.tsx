@@ -1,6 +1,6 @@
 // import React from "react";
-import Header from "./header";
-import Footer from "./footer";
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 // import BgCircle from "./bg_effect/bg_circle";
 // import BgColor from "./bg_effect/bg_color";
 

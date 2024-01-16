@@ -1,23 +1,30 @@
-.head2{
-   @apply font-bold text-slate-200 sticky top-12 backdrop-blur-md bg-[#06122480] py-2 z-20 -mx-4 px-6 w-screen 
-   sm:-mx-20 sm:px-20 md:w-auto lg:static lg:backdrop-blur-0 lg:bg-transparent lg:hidden;
-}
-.head1{
+.head1 {
    @apply text-4xl font-bold font-openSans
 }
-.card{
-   @apply flex flex-col-reverse gap-6 border-spacing-3 p-3 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:rounded lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
+.head2 {
+   @apply font-bold text-slate-200 sticky top-12 backdrop-blur-md bg-[#06122480] py-2 z-20 -mx-4 px-6 w-screen sm:-mx-20 sm:px-20 md:w-auto lg:static lg:backdrop-blur-0 lg:bg-transparent lg:hidden md:top-16;
 }
+.skills__head3{
+   @apply text-slate-500 text-sm font-light
+}
+
+
+/* .card {
+   @apply flex flex-col-reverse gap-6 border-spacing-3 p-3 shadow-[inset_0_1px_0_0_rgba(148, 163, 184, 0.1)] lg:rounded lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148, 163, 184, 0.1)]
+} */
+
 /* .card{
    @apply flex flex-col-reverse gap-6 border-spacing-3 p-3 rounded bg-slate-800/50 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
 } */
-.active .effect_text{
+.active .effect_text {
    @apply text-slate-200
 }
-.active .effect_line{
+
+.active .effect_line {
    @apply bg-slate-200 w-16
 }
-.effectWriting{
+
+.effectWriting {
    display: block;
    /* border-right: .25rem solid #26bfad; */
    white-space: nowrap;
@@ -25,50 +32,109 @@
    animation: blink .5s infinite step-end alternate, typing 1.8s steps(5);
    overflow: hidden;
 }
+
 @keyframes blink {
-   50%{
+   50% {
       border-color: transparent;
       /* border-color: #26bfad; */
    }
 }
+
 @keyframes typing {
+
    /* from {width: 0;}  */
-   0%{
+   0% {
       width: 0;
    }
-   40%{
+
+   40% {
       width: 0;
    }
-   100%{
+
+   100% {
       width: 5ch;
    }
+
    /* 100%{
       width: 0;
    } */
 }
 
 /* EFECT GOOGLE PLACEHOLDERSHOWN */
-.input{
+.input {
    @apply rounded-sm w-full px-2 py-2 outline-none border-slate-500 bg-slate-100 border-2 outline-offset-2 focus:border-teal-600 transition-all ease-linear duration-150
-
 }
-.label{
+
+.label {
    position: absolute;
    top: 0.6rem;
    left: 0.7rem;
    transition: transform .2s, color .2s;
    @apply text-slate-400
 }
-.input:not(:placeholder-shown){
+
+.input:not(:placeholder-shown) {
    color: rgb(71, 85, 105);
 }
-.input:not(:placeholder-shown) + .label{
+
+.input:not(:placeholder-shown)+.label {
    transform: translateY(-18px) scale(0.8);
    transform-origin: left top;
    color: teal;
    font-weight: 700;
    @apply bg-slate-100 px-1
 }
-.span{
+
+.span {
    @apply font-thin text-red-700 text-xs absolute bottom-0 lg:bottom-[6px] left-0
+}
+
+/* TODO: styles for the infinite carousel */
+@keyframes scrollY {
+   0% {
+      transform: translateX(calc(-120px * 5 - .5rem * 10));
+   }
+
+   100% {
+      transform: translateX(0);
+   }
+}
+
+/* TODO: here we ara stopping the animation when we do hover on it */
+.animate-scroll {
+   animation: scrollY 8s linear infinite;
+   animation-play-state: running;
+}
+
+.animate-scroll:hover {
+   animation-play-state: paused;
+}
+
+.animate-scroll:not(:hover) {
+   animation-play-state: running;
+}
+
+/* TODO: styles for the infinite carousel reversed */
+@keyframes scrollYReverse {
+   
+
+   0% {
+      transform: translateX(0);
+   }
+   100% {
+      transform: translateX(calc(-120px * 5 - .5rem * 10));
+   }
+}
+
+.animate-scroll-reverse {
+   animation: scrollYReverse 8s linear infinite;
+   animation-play-state: running;
+}
+
+.animate-scroll-reverse:hover {
+   animation-play-state: paused;
+}
+
+.animate-scroll-reverse:not(:hover) {
+   animation-play-state: running;
 }

@@ -1,9 +1,9 @@
 import "./App.css";
-import Layout from "./components/layout";
+import Layout from "./layout";
 
-import Main from "./components/layout/main";
-import Privacity from "./components/layout/privacity";
-import Terms from "./components/layout/useTemrs";
+import Main from "./pages/main";
+import Privacity from "./pages/privacity";
+import Terms from "./pages/useTemrs";
 
 import { Routes, Route, HashRouter } from "react-router-dom";
 // BrowserRouter

@@ -1,7 +1,7 @@
-import { Whatsapp, Mail, Address } from "./icons";
-import { Github, Linkedin } from "./icons_media";
-import Section from "./layout/section";
-import FormContact from "./layout/form_contact";
+import { Whatsapp, Mail, Address } from "../../constants/icons/icons";
+import { Github, Linkedin } from "../../constants/icons/media_icons";
+import Section from "../layouts/section";
+import FormContact from "./form_contact";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -63,7 +63,7 @@ const Footer = () => {
                         </a>
                      </li>
                   </ul>
-                  <div className="text-xl mt-6 text-slate-700 font-bold mx-auto mb-2 md:mt-12 md:mb-6 lg:mx-0">
+                  <div className="text-xl mt-12 mb-6 text-slate-700 font-bold mx-auto  md:mt-12 md:mb-8 lg:mx-0">
                      <h2 className="">Redes Sociales</h2>
                   </div>
                   <ul className="flex flex-col items-center gap-4 md:gap-6 lg:items-start">

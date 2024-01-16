@@ -1,21 +1,39 @@
-// import React from 'react'
-import { TRAINING, info_projects, info_menu } from "../constants_info";
-import BgCircle from "../bg_effect/bg_circle";
-import BgColor from "../bg_effect/bg_color";
+import { FC } from "react";
+import {
+   TRAINING,
+   info_projects,
+   info_menu,
+} from "../constants/info/constants_info";
+import BgCircle from "../components/bg_effect/bg_circle";
+import BgColor from "../components/bg_effect/bg_color";
 // CARDS
-import FormationCard from "../layout/card_formation";
-import CardProjects from "../layout/card_projects";
-import Btn_desktop from "../btn_desktop_menu";
+import FormationCard from "../components/cards/card_formation";
+import CardProjects from "../components/cards/card_projects";
+import Btn_desktop from "../components/btn_desktop_menu";
+// CAROUSEL
+import Carousel from "../components/carousel/carousel";
 // CONTAINER
-import Section from "../layout/section";
-import Container from "../layout/container";
+import Section from "../components/layouts/section";
+import Container from "../components/layouts/container";
 // ICONS
-import { icons_media } from "../icons_media";
-import { Logos } from "../icons_skills";
+import { icons_media } from "../constants/icons/media_icons";
 // @ts-ignore
-import Perfil from "../../assets/img/void_zaid.png?url";
+import Perfil from "../assets/img/void_zaid.png?url";
+import { useState } from "react";
+// interfaces
+import {
+   Logo,
+   MainSkills,
+   SecondarySkills,
+   ComplementarySkills,
+} from "../constants/icons/skills_icons";
 
 const Main = () => {
+   const [mainSkills] = useState<Logo[]>(MainSkills.concat(MainSkills));
+   const [secondarySkills] = useState<Logo[]>(
+      SecondarySkills.concat(SecondarySkills)
+   );
+
    return (
       <>
          <BgCircle
@@ -61,9 +79,7 @@ const Main = () => {
                                        href={e.url}
                                        className="text-sm font-semibold leading-6 text-gray-900"
                                     >
-                                       <e.icon
-                                          className="stroke-teal-500 h-10"
-                                       />
+                                       <e.icon className="stroke-teal-500 h-10" />
                                     </a>
                                  </li>
                               ))}
@@ -146,9 +162,7 @@ const Main = () => {
                                  target="blank"
                                  className="text-sm font-semibold leading-6 text-gray-900"
                               >
-                                 <e.icon
-                                    className="stroke-teal-400 hover:stroke-teal-500 h-10"
-                                 />
+                                 <e.icon className="stroke-teal-400 hover:stroke-teal-500 h-10" />
                               </a>
                            </li>
                         ))}
@@ -214,21 +228,57 @@ const Main = () => {
 
                   {/* SKILLS */}
                   <Section id="skills" className="w-full">
-                     <BgColor className="lg:hidden" />
-                     <Container className="gap-10 md:w-full">
+                     <Container className=" md:w-full w-full">
                         <h2 className="head2">SKILLS</h2>
                         <div
-                           className="flex justify-evenly flex-wrap gap-x-5 gap-y-6 max-w-sm mx-auto
-                  sm:gap-x-10 sm:max-w-md
-                  md:max-w-lg
+                           className=" w-full flex items-center flex-col mx-auto
+                           sm:gap-4 md:gap-6 
                   lg:gap-x-12 lg:max-w-xl
                   xl:max-w-xl"
                         >
-                           {Logos.map((Icon, id) => (
-                              <Icon key={id} className="" />
-                           ))}
+                           <h3 className="skills__head3 mt-5 md:mt-0">
+                              Habilidades Principales
+                           </h3>
+                           <Carousel>
+                              {mainSkills.map(
+                                 ({ component: Component }, id) => (
+                                    <article
+                                       key={id}
+                                       className="cursor-pointer w-[120px] flex-shrink-0 "
+                                    >
+                                       <Component className="mx-auto" />
+                                    </article>
+                                 )
+                              )}
+                           </Carousel>
+                           <h3 className="skills__head3 mt-12 md:mt-8">
+                              Lo que estoy aprendiendo
+                           </h3>
+                           <Carousel reverse={true}>
+                              {secondarySkills.map(
+                                 ({ component: Component }, id) => (
+                                    <article
+                                       key={id}
+                                       className="cursor-pointer w-[120px] flex-shrink-0 "
+                                    >
+                                       <Component className="mx-auto" />
+                                    </article>
+                                 )
+                              )}
+                           </Carousel>
+                           <h3 className="skills__head3 mt-8 mb-5">
+                              Habilidades Complementarias
+                           </h3>
+                           <div className="flex justify-center items-center gap-5 md:gap-10 w-full">
+                              {ComplementarySkills.map(
+                                 ({ component: Component }, id) => (
+                                    <Component className="h-10 md:h-12" key={id} />
+                                 )
+                              )}
+                           </div>
                         </div>
                      </Container>
+                     <BgColor className="lg:hidden" />
                   </Section>
                   {/* PROJECTS */}
                   <Section id="projects">

@@ -1,5 +1,5 @@
 import {  FC, useRef } from "react";
-import { ArrowRightUp } from "../icons";
+import { ArrowRightUp } from "../../constants/icons/icons";
 
 type Project = {
    title: string;
@@ -21,7 +21,7 @@ const CardProjects: FC<Project> = ({
    const anchor = useRef<HTMLAnchorElement>(null);
 
    const handleClick = () => {
-      console.log(anchor.current)
+      // console.log(anchor.current)
       anchor.current?.click();
    };
    return (

@@ -1,11 +1,11 @@
 // import React from 'react'
-import Section from "./section";
-import Container from "./container";
-import BgColor from "../bg_effect/bg_color";
-import BgCircle from "../bg_effect/bg_circle";
+import Section from "../components/layouts/section";
+import Container from "../components/layouts/container";
+import BgColor from "../components/bg_effect/bg_color";
+import BgCircle from "../components/bg_effect/bg_circle";
 
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "../icons";
+import { ArrowLeft } from "../constants/icons/icons";
 const Terms = () => {
    return (
       <Section className="md:justify-center md:min-h-minCustomMobile">
