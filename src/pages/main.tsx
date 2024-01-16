@@ -1,4 +1,3 @@
-import { FC } from "react";
 import {
    TRAINING,
    info_projects,
@@ -123,8 +122,9 @@ const Main = () => {
                         <div className="md:pt-0 lg:hidden">
                            <button className="rounded-full animate-bounce border-4 border-teal-400  px-4 py-1 font-bold text-slate-100 text-lg shadow-lg shadow-cyan-900 hover:border-teal-800">
                               <a
-                                 href="public/pdf/2312_cv-progr_en_sim.pdf"
+                                 href="https://drive.google.com/file/d/1JkI6FfjJXunizLl8pm9pfJYwblpj5fgu/view?usp=sharing"
                                  download
+                                 target="_blank"
                               >
                                  Descargar CV
                               </a>
@@ -146,8 +146,9 @@ const Main = () => {
                      <div className="md:pt-0 hidden lg:block">
                         <button className=" rounded-full animate-bounce border-4 border-teal-400  border-solid px-4 py-1 font-bold text-slate-100 text-sm shadow-lg shadow-cyan-900 hover:border-teal-500 hover:text-slate-400">
                            <a
-                              href="./public/pdf/2312_cv-progr_en_sim.pdf"
+                              href="https://drive.google.com/file/d/1JkI6FfjJXunizLl8pm9pfJYwblpj5fgu/view?usp=sharing"
                               download
+                              target="_blank"
                            >
                               Descargar CV
                            </a>
