@@ -18,7 +18,14 @@ import Container from "../components/layouts/container";
 import { icons_media } from "../constants/icons/media_icons";
 // @ts-ignore
 import Perfil from "../assets/img/void_zaid.png?url";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+// typed.js
+// @ts-ignore
+import TypedText from "../components/typed/typed-text";
+// aos.js
+// @ts-ignore
+import AOS from "aos";
+import "aos/dist/aos.css";
 // interfaces
 import {
    Logo,
@@ -32,6 +39,9 @@ const Main = () => {
    const [secondarySkills] = useState<Logo[]>(
       SecondarySkills.concat(SecondarySkills)
    );
+   useEffect(() => {
+      AOS.init();
+   }, []);
 
    return (
       <>
@@ -58,15 +68,22 @@ const Main = () => {
                            className="text-slate-200 
                   sm:flex sm:flex-col sm:gap-4 md:gap-2 lg:gap-1"
                         >
-                           <h1
-                              className="head1 pt-8 pb-4
-                      lg:pt-0 lg:text-5xl lg:pb-2"
+                           <div
+                              data-aos="fade-right"
+                              data-aos-duration="600"
+                              data-aos-easing="ease-in-out"
+                              data-aos-anchor-placement="top-center"
+                              data-aos-delay="400"
+                              data-aos-once="true"
                            >
-                              Void Zaid
-                           </h1>
-                           <h2 className="text-xl font-medium">
-                              Web Developer
-                           </h2>
+                              <h1
+                                 className="head1 pt-8 pb-4
+                      lg:pt-0 lg:text-5xl lg:pb-2"
+                              >
+                                 Void Zaid
+                              </h1>
+                           </div>
+                           <TypedText />
                            <p className="tex text-slate-400 lg:w-3/4">
                               Hola, mi nombre es Paúl Díaz y construyo páginas y
                               aplicaciones web
@@ -84,51 +101,47 @@ const Main = () => {
                               ))}
                            </ul>
                         </div>
+
                         <picture
                            className="relative flex flex-col items-center justify-center gap-10 h-full 
                   sm:gap-10 sm:pb-0 sm:h-auto lg:items-start lg:w-full"
                         >
-                           <img
-                              className="object-cover rounded-full w-full sm:max-w-xs lg:w-1/4 lg:max-w-xs"
-                              src={Perfil}
-                           />
-                           {/* <div
-                              className="flex relative items-center  bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-slate-400 mr-8 ml-4 
-                        sm:pb-8
-                        lg:hidden"
+                           <div
+                              data-aos="fade-right"
+                              data-aos-duration="500"
+                              data-aos-easing="ease-in-out"
+                              data-aos-anchor-placement="top-center"
+                              data-aos-once="true"
                            >
-                              <span
-                                 className="animate-glowing bg-clip-text  mx-auto text-2xl font-bold font-rubikMono tracking-[-4px] absolute -left-4 text-slate-600
-                              "
-                              >
-                                 {"<"}
-                              </span>
-                              <figcaption
-                                 className="text-3xl font-bold font-rubikMono
-                              effectWriting border-slate-400 border-r-4 leading-7 text-center
-                              "
-                              >
-                                 {"coder"}
-                              </figcaption>
-                              <span
-                                 className="animate-glowing  mx-auto text-2xl font-bold font-rubikMono tracking-[-4px] absolute -right-8 text-slate-400 z-20
-                              "
-                              >
-                                 {"/>"}
-                              </span>
-                           </div> */}
+                              <img
+                                 className="lg:h-36 lg:w-36 object-cover rounded-full w-full sm:max-w-xs  lg:max-w-xs"
+                                 src={Perfil}
+                              />
+                           </div>
                         </picture>
                         {/* cv button */}
+
                         <div className="md:pt-0 lg:hidden">
-                           <button className="rounded-full animate-bounce border-4 border-teal-400  px-4 py-1 font-bold text-slate-100 text-lg shadow-lg shadow-cyan-900 hover:border-teal-800">
-                              <a
-                                 href="https://drive.google.com/file/d/1JkI6FfjJXunizLl8pm9pfJYwblpj5fgu/view?usp=sharing"
-                                 download
-                                 target="_blank"
-                              >
-                                 Descargar CV
-                              </a>
-                           </button>
+                           <div
+                              data-aos="fade-right"
+                              data-aos-duration="300"
+                              data-aos-easing="ease-in-out"
+                              data-aos-anchor-placement="top-center"
+                              data-aos-delay="850"
+                              data-aos-mirror="false"
+                              data-aos-once="true"
+                              data-aos-offset="-500"
+                           >
+                              <button className="rounded-full animate-bounce border-4 border-teal-400  px-4 py-1 font-bold text-slate-100 text-lg shadow-lg shadow-cyan-900 hover:border-teal-800">
+                                 <a
+                                    href="https://drive.google.com/file/d/1JkI6FfjJXunizLl8pm9pfJYwblpj5fgu/view?usp=sharing"
+                                    download
+                                    target="_blank"
+                                 >
+                                    Descargar CV
+                                 </a>
+                              </button>
+                           </div>
                         </div>
                         <nav className="hidden lg:block">
                            <ul className="">
@@ -144,15 +157,26 @@ const Main = () => {
                      </div>
                      {/* button cv LG */}
                      <div className="md:pt-0 hidden lg:block">
-                        <button className=" rounded-full animate-bounce border-4 border-teal-400  border-solid px-4 py-1 font-bold text-slate-100 text-sm shadow-lg shadow-cyan-900 hover:border-teal-500 hover:text-slate-400">
-                           <a
-                              href="https://drive.google.com/file/d/1JkI6FfjJXunizLl8pm9pfJYwblpj5fgu/view?usp=sharing"
-                              download
-                              target="_blank"
-                           >
-                              Descargar CV
-                           </a>
-                        </button>
+                        <div
+                           data-aos="fade-right"
+                           data-aos-duration="300"
+                           data-aos-easing="ease-in-out"
+                           data-aos-anchor-placement="top-center"
+                           data-aos-delay="850"
+                           data-aos-mirror="false"
+                           data-aos-once="true"
+                           data-aos-offset="-500"
+                        >
+                           <button className=" rounded-full animate-bounce border-4 border-teal-400  border-solid px-4 py-1 font-bold text-slate-100 text-sm shadow-lg shadow-cyan-900 hover:border-teal-500 hover:text-slate-400">
+                              <a
+                                 href="https://drive.google.com/file/d/1JkI6FfjJXunizLl8pm9pfJYwblpj5fgu/view?usp=sharing"
+                                 download
+                                 target="_blank"
+                              >
+                                 Descargar CV
+                              </a>
+                           </button>
+                        </div>
                      </div>
                      {/* SOCIAL MEDIA ICONS */}
                      <ul className="flex gap-6 justify-center mt-auto sm:pb-0 md:mt-auto lg:justify-start">
@@ -273,7 +297,10 @@ const Main = () => {
                            <div className="flex justify-center items-center gap-5 md:gap-10 w-full">
                               {ComplementarySkills.map(
                                  ({ component: Component }, id) => (
-                                    <Component className="h-10 md:h-12" key={id} />
+                                    <Component
+                                       className="h-10 md:h-12"
+                                       key={id}
+                                    />
                                  )
                               )}
                            </div>
