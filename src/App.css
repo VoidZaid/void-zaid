@@ -7,7 +7,7 @@
 }
 
 .head3 {
-   @apply text-lg font-semibold text-teal-700
+   @apply text-lg font-semibold text-teal-800
 }
 
 .skills__head3 {
@@ -68,7 +68,7 @@
 
 /* EFECT GOOGLE PLACEHOLDERSHOWN */
 .input {
-   @apply rounded-sm w-full px-2 py-2 outline-none border-slate-400 bg-slate-100 border-[1px] outline-offset-2 focus:border-teal-600 transition-all ease-linear duration-100
+   @apply rounded-sm w-full px-2 py-2 outline-none border-slate-400 bg-slate-100/50 border-[1px] outline-offset-2 focus:border-teal-600 transition-all ease-linear duration-100
 }
 
 .label {
@@ -76,7 +76,7 @@
    top: 0.6rem;
    left: 0.7rem;
    transition: transform .2s, color .2s;
-   @apply text-slate-400
+   @apply text-slate-400 bg-slate-50
 }
 
 .input:not(:placeholder-shown) {
@@ -88,7 +88,7 @@
    transform-origin: left top;
    color: teal;
    font-weight: 700;
-   @apply bg-slate-100 px-1
+   @apply bg-slate-50 px-1
 }
 
 .span {

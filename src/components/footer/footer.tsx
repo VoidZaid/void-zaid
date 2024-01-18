@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
    return (
-      <footer className="bg-slate-100 text-slate-700 sm:text-base">
+      <footer className="bg-slate-50 text-slate-700 sm:text-base">
          <Section
-            className="max-w-screen-xl pt-16 pb-0 sm:px-28 md:px-28 bg-slate-100 xl:bg-slate-100 lg:bg-slate-100 lg:px-0 lg:py-12 lg:mx-auto"
+            className="max-w-screen-xl pt-16 pb-0 sm:px-28 md:px-28 bg-transparent lg:px-0 lg:py-12 lg:mx-auto"
             id="contact"
          >
             <h2 className="font-bold text-slate-700 mx-auto lg:mx-0 lg:ml-10 mb-8 lg:text-2xl lg:mb-8">
@@ -90,14 +90,14 @@ const Footer = () => {
          {/* JUST VISIBLE ON DESKTOP */}
 
          {/* bar footer */}
-         <section className="mx-auto text-slate-200 bg-black">
+         <section className="mx-auto text-slate-200 bg-zinc-950">
             <div
                className="max-w-screen-xl mx-auto flex flex-col-reverse pt-8 items-center gap-6 py-4 h-auto  mb-0 w-full
             md:justify-between
             lg:flex-row lg:px-4 lg:z-50 lg:py-6"
             >
-               <span className="block text-gray-300">
-                  &copy; 2023 | desarrollado por Paúl Díaz
+               <span className="block text-gray-300 font-extralight">
+                  &copy; 2024 | desarrollado por Paúl Díaz
                </span>
                <div
                   className="flex flex-col gap-6 items-center justify-around
@@ -105,13 +105,13 @@ const Footer = () => {
                >
                   <Link
                      to="./terminos-de-uso"
-                     className="flex justify-between text-white font-semibold"
+                     className="flex justify-between text-white "
                   >
                      Terminos de uso
                   </Link>
                   <Link
                      to="./politica-privacidad"
-                     className="font-semibold flex justify-between text-white"
+                     className=" flex justify-between text-white"
                   >
                      Política de privacidad
                   </Link>
