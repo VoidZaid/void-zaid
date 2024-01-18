@@ -8,13 +8,13 @@ const Footer = () => {
    return (
       <footer className="bg-slate-100 text-slate-700 sm:text-base">
          <Section
-            className="max-w-screen-xl py-16 sm:py-16 sm:px-28 md:px-28 bg-slate-100 xl:bg-slate-100 lg:bg-slate-100 lg:px-0 lg:py-12 lg:mx-auto"
+            className="max-w-screen-xl pt-16 pb-0 sm:px-28 md:px-28 bg-slate-100 xl:bg-slate-100 lg:bg-slate-100 lg:px-0 lg:py-12 lg:mx-auto"
             id="contact"
          >
             <h2 className="font-bold text-slate-700 mx-auto lg:mx-0 lg:ml-10 mb-8 lg:text-2xl lg:mb-8">
                CONTÁCTAME
             </h2>
-            <div className="flex gap-20 flex-col md:items-center lg:items-start lg:justify-between md:gap-32 lg:flex-row lg:gap-10 lg:mx-10">
+            <div className="flex gap-20 flex-col md:items-center lg:items-start lg:justify-between md:gap-28 lg:flex-row lg:gap-10 lg:mx-10">
                {/* LINKEDIN */}
                <div className="lg:block lg:w-4/12 mx-auto order-3 lg:order-2 lg:mx-0">
                   <div
