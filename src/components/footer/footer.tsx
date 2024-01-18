@@ -16,7 +16,7 @@ const Footer = () => {
             </h2>
             <div className="flex gap-20 flex-col md:items-center lg:items-start lg:justify-between md:gap-28 lg:flex-row lg:gap-10 lg:mx-10">
                {/* LINKEDIN */}
-               <div className="lg:block lg:w-4/12 mx-auto order-3 lg:order-2 lg:mx-0">
+               <div className="lg:block lg:w-4/12 mb-12 mx-auto order-3 lg:order-2 lg:mx-0">
                   <div
                      className="badge-base LI-profile-badge mx-auto w-[336px]"
                      data-locale="es_ES"
