@@ -1,10 +1,16 @@
 .head1 {
    @apply text-4xl font-bold font-openSans
 }
+
 .head2 {
    @apply font-bold text-slate-200 sticky top-12 backdrop-blur-md bg-[#06122480] py-2 z-20 -mx-4 px-6 w-screen sm:-mx-20 sm:px-20 md:w-auto lg:static lg:backdrop-blur-0 lg:bg-transparent lg:hidden md:top-16;
 }
-.skills__head3{
+
+.head3 {
+   @apply text-lg font-semibold text-teal-700
+}
+
+.skills__head3 {
    @apply text-slate-500 text-sm font-light
 }
 
@@ -62,7 +68,7 @@
 
 /* EFECT GOOGLE PLACEHOLDERSHOWN */
 .input {
-   @apply rounded-sm w-full px-2 py-2 outline-none border-slate-500 bg-slate-100 border-2 outline-offset-2 focus:border-teal-600 transition-all ease-linear duration-150
+   @apply rounded-sm w-full px-2 py-2 outline-none border-slate-400 bg-slate-100 border-[1px] outline-offset-2 focus:border-teal-600 transition-all ease-linear duration-100
 }
 
 .label {
@@ -116,11 +122,12 @@
 
 /* TODO: styles for the infinite carousel reversed */
 @keyframes scrollYReverse {
-   
+
 
    0% {
       transform: translateX(0);
    }
+
    100% {
       transform: translateX(calc(-120px * 5 - .5rem * 10));
    }
@@ -137,4 +144,24 @@
 
 .animate-scroll-reverse:not(:hover) {
    animation-play-state: running;
+}
+
+@keyframes glowing {
+   0% {
+      transform: scale(1);
+   }
+
+   50% {
+      transform: scale(1.05);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+.skill_icon {
+   animation: glowing 1500ms linear infinite;
+}
+.delay{
+   animation-delay: 750ms;
 }

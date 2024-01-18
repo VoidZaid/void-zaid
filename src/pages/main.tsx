@@ -294,13 +294,15 @@ const Main = () => {
                            <h3 className="skills__head3 mt-8 mb-5">
                               Habilidades Complementarias
                            </h3>
-                           <div className="flex justify-center items-center gap-5 md:gap-10 w-full">
+                           <div className="flex justify-center items-center gap-4 md:gap-5 w-full ">
                               {ComplementarySkills.map(
                                  ({ component: Component }, id) => (
-                                    <Component
-                                       className="h-10 md:h-12"
-                                       key={id}
-                                    />
+                                    <div className= {`bg-slate-800/50 p-2 rounded-md w-14 h-14 flex skill_icon ${id%2 === 0 ? 'delay' : ''}`} key={id}>
+                                       <Component
+                                          className="w-10 md:h-12"
+                                          
+                                       />
+                                    </div>
                                  )
                               )}
                            </div>

@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
    return (
-      <footer className="bg-slate-100 text-slate-700 sm:text-lg">
+      <footer className="bg-slate-100 text-slate-700 sm:text-base">
          <Section
-            className="max-w-screen-xl py-16 sm:py-16 sm:px-28 md:px-28 bg-slate-100 xl:bg-slate-100 lg:bg-slate-100 lg:px-0 lg:py-16 lg:mx-auto"
+            className="max-w-screen-xl py-16 sm:py-16 sm:px-28 md:px-28 bg-slate-100 xl:bg-slate-100 lg:bg-slate-100 lg:px-0 lg:py-12 lg:mx-auto"
             id="contact"
          >
-            <h2 className="font-bold text-slate-700 mx-auto lg:mx-0 lg:ml-10 mb-8 lg:text-2xl lg:mb-20">
+            <h2 className="font-bold text-slate-700 mx-auto lg:mx-0 lg:ml-10 mb-8 lg:text-2xl lg:mb-8">
                CONTÁCTAME
             </h2>
             <div className="flex gap-20 flex-col md:items-center lg:items-start lg:justify-between md:gap-32 lg:flex-row lg:gap-10 lg:mx-10">
@@ -33,8 +33,8 @@ const Footer = () => {
                   </div>
                </div>
                {/* REDES */}
-               <address className="md:flex md:pb-8 flex flex-col order-2 lg:order-1 lg:w-3/12 lg:pl-0">
-                  <ul className="flex flex-col items-center gap-4 md:gap-6 w-full lg:items-start">
+               <address className="md:flex lg:pb-0 md:pb-8 flex flex-col order-2 lg:order-1 lg:w-3/12 lg:pl-0">
+                  <ul className="flex flex-col items-center lg:gap-3 gap-4 md:gap-6 w-full lg:items-start">
                      <li>
                         <a
                            href="https://www.google.com/maps/place/Arequipa/@-16.403966,-71.5802114,13z/data=!3m1!4b1!4m6!3m5!1s0x91424a487785b9b3:0xa3c4a612b9942036!8m2!3d-16.4090474!4d-71.537451!16zL20vMDFweTg3?entry=ttu"
@@ -63,10 +63,10 @@ const Footer = () => {
                         </a>
                      </li>
                   </ul>
-                  <div className="text-xl mt-12 mb-6 text-slate-700 font-bold mx-auto  md:mt-12 md:mb-8 lg:mx-0">
+                  <div className="text-xl mt-12 mb-6 text-slate-700 font-bold mx-auto lg:mb-5 lg:mt-10 md:mt-12 md:mb-8 lg:mx-0">
                      <h2 className="">Redes Sociales</h2>
                   </div>
-                  <ul className="flex flex-col items-center gap-4 md:gap-6 lg:items-start">
+                  <ul className="flex flex-col items-center gap-4 lg:gap-3 md:gap-6 lg:items-start">
                      <li>
                         <a
                            href="https://www.linkedin.com/in/rene-paul-diaz/"

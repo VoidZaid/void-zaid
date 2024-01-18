@@ -17,7 +17,7 @@ const FormationCard: FC<Formation> = ({
    resume,
 }) => {
    return (
-      <div className="group">
+      <div className="group cursor-default">
          <div
             className=" flex flex-col border-spacing-3 p-3 rounded bg-slate-800/50 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]
             sm:flex-row sm:bg-inherit sm:shadow-none sm:gap-6 transition-all ease-in duration-75
@@ -30,9 +30,9 @@ const FormationCard: FC<Formation> = ({
             >
                {date}
             </p>
-            <div className="sm:w-3/4 md:w-4/5">
+            <div className="sm:w-3/4 md:w-4/5 overflow-hidden">
                <p className="">{institution}</p>
-               <h3 className="hover:text-teal-300 text-slate-200 font-bold pb-6 sm:pb-0">
+               <h3 className="hover:text-teal-300 group-hover:text-teal-300 text-slate-200 font-bold pb-6 sm:pb-0">
                   {profession}
                </h3>
                <div
@@ -40,8 +40,9 @@ const FormationCard: FC<Formation> = ({
                   data-aos-duration="600"
                   data-aos-easing="ease-in-out"
                   data-aos-anchor-placement="top-center"
-                  data-aos-delay="400"
-                  data-aos-offset="-400"
+                  data-aos-delay=""
+                  data-aos-offset="-300"
+                  data-aos-once="true"
                >
                   <Icon
                      className="fill fill-slate-200 pb-4 mx-auto h-32 

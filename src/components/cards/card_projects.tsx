@@ -1,4 +1,4 @@
-import {  FC, useRef } from "react";
+import { FC, useRef } from "react";
 import { ArrowRightUp } from "../../constants/icons/icons";
 
 type Project = {
@@ -42,12 +42,12 @@ const CardProjects: FC<Project> = ({
             </figure>
             <div className="sm:w-3/4">
                <h3
-                  className="font-bold text-slate-200 
-                        hover:text-teal-400"
+                  className="font-bold [&&]:text-slate-200 
+                  group-hover:text-teal-300"
                >
                   <a ref={anchor} className="flex" href={url} target="_blank">
                      {title}
-                     <ArrowRightUp />
+                     <ArrowRightUp className="pl-1 h-6 w-6 transition-all ease-in transform translate-y-[1px] group-hover:translate-x-[5px] group-hover:-translate-y-[2px]" />
                   </a>
                </h3>
                <p>{resume}</p>

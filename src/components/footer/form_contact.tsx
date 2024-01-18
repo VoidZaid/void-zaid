@@ -21,6 +21,7 @@ const FormContact = ({ className }: { className: string }) => {
    // console.log(errors.email?.type);
    return (
       <form action="" className={`${className}`} onSubmit={handleSubmit(onSubmit)}>
+         <h3 className="head3 mb-4">Envíame un mensaje</h3>
          <fieldset className="w-full">
             <div className={`relative pb-4 mb-2 md:pb-5 w-full  lg:mb-1`}>
                <input
